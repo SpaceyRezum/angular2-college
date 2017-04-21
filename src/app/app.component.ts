@@ -1,37 +1,26 @@
-import { Component } from '@angular/core'; 
-
-export class Topic {
-	name: string;
-	color: string;
-	content: string;
-	imgUrl: string;
-	id: number;
-}
-
-const TOPICS: Topic[] = [
-	{ name: 'Second Education', color: 'orange', content: 'This is the content for Second Education Topic Box', imgUrl: 'img.jpg', id: 1 },
-	{ name: 'English as Second Language', color: 'green', content: 'This is the content for ESL Topic Box', imgUrl: 'img.jpg', id: 2 },
-	{ name: 'Third Education', color: 'purple', content: 'This is the content for Third Education Topic Box', imgUrl: 'img.jpg', id: 3 },
-	{ name: 'English as Third Language', color: 'blue', content: 'This is the content for English as Third Language Topic Box', imgUrl: 'img.jpg', id: 4 },
-];
+import { Component } from '@angular/core';
+import { Topic } from './data/topics/topics-model';
+import { TopicService } from './topic.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [ TopicService ]
 })
 export class AppComponent {
-  title = 'What\s up with some app!';
-  topics = TOPICS;
+	constructor(private topicService: TopicService) { };
+
+  topics = this.topicService.getTopics();
   selectedTopic: Topic;
 
-  onSelect(topic: Topic) {
+  selectTopic(topic: Topic) {
   	this.selectedTopic = topic;
-  	console.log('this is the topic I am selecting', this.selectedTopic);
+  	console.log('This is the topic I am selecting', this.selectedTopic);
   }
 
-  onResetSelectedTopic() {
+  resetSelectedTopic() {
   	this.selectedTopic = null;
-  	console.log('selectedTopic disapeared');  
+  	console.log('Topic unselected');  
   }
 };

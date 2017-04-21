@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OptionBoxComponent } from './option-box.component';
+import { TopicBoxComponent } from './topic-box.component';
 
-describe('OptionBoxComponent', () => {
-  let component: OptionBoxComponent;
-  let fixture: ComponentFixture<OptionBoxComponent>;
+describe('TopicBoxComponent', () => {
+  let component: TopicBoxComponent;
+  let fixture: ComponentFixture<TopicBoxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OptionBoxComponent ]
+      declarations: [ TopicBoxComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OptionBoxComponent);
+    fixture = TestBed.createComponent(TopicBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

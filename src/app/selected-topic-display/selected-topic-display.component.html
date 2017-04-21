@@ -1,0 +1,7 @@
+<div *ngIf="selectedTopic">
+	<h2>{{selectedTopic.name}} details!</h2>
+	<div><span>color: </span>{{selectedTopic.color}}</div>
+	<div><span>id: </span>{{selectedTopic.id}}</div>
+	<p>{{selectedTopic.content}}</p>
+	<button (click)="resetSelectedTopic()">Reset Selected Topic</button>
+</div>

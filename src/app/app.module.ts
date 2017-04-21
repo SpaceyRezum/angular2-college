@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { OptionBoxComponent } from './option-box/option-box.component';
+import { TopicBoxComponent } from './topic-box/topic-box.component';
+import { SelectedTopicDisplayComponent } from './selected-topic-display/selected-topic-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OptionBoxComponent
+    TopicBoxComponent,
+    SelectedTopicDisplayComponent
   ],
   imports: [
     BrowserModule,
