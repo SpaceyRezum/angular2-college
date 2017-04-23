@@ -1,0 +1,9 @@
+<div class="topic-title-container" [ngStyle]="{'background-color': topic.color}">
+	<h2>{{topic.name}}</h2>
+</div>
+<div class="topic-content-container">
+	<p>Lorem ipsum</p>
+</div>
+<div class="topic-button-container" [ngStyle]="{'background-color': topic.color}">
+	<button (click)="selectTopic(topic)">Expand details</button>
+</div>

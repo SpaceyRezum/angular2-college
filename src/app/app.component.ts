@@ -1,26 +1,15 @@
-import { Component } from '@angular/core';
-import { Topic } from './data/topics/topics-model';
-import { TopicService } from './topic.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [ TopicService ]
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-	constructor(private topicService: TopicService) { };
+export class AppComponent implements OnInit {
 
-  topics = this.topicService.getTopics();
-  selectedTopic: Topic;
+  constructor() { }
 
-  selectTopic(topic: Topic) {
-  	this.selectedTopic = topic;
-  	console.log('This is the topic I am selecting', this.selectedTopic);
+  ngOnInit() {
   }
 
-  resetSelectedTopic() {
-  	this.selectedTopic = null;
-  	console.log('Topic unselected');  
-  }
-};
+}

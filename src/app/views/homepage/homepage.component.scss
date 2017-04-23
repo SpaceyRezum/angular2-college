@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+}
+
+.topic-box {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+	app-topic-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		width: 20%;
+		
+		border: 1px solid gray;
+		border-radius: 20px;
+		overflow: hidden;
+		margin: 0 2%;
+		height: 400px;
+	}
+}

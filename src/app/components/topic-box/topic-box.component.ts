@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Topic } from '../data/topics/topics-model';
+import { Topic } from '../../data/topics/topics-model';
 
 @Component({
   selector: 'app-topic-box',

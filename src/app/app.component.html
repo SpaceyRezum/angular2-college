@@ -1,13 +1,1 @@
-<h1>
-  Welcome to NAB College, what can we help you with?
-</h1>
-<div class="topic-box" *ngFor="let topic of topics">
-	<app-topic-box 
-		[topic]="topic"
-		(onSelectTopic)="selectTopic($event)">
-	</app-topic-box>
-</div>
-<app-selected-topic-display 
-	[selectedTopic]="selectedTopic"
-	(onResetSelectedTopic)="resetSelectedTopic($event)">
-</app-selected-topic-display>
+<router-outlet></router-outlet>
