@@ -7,6 +7,7 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
+import { TopicDetailPageComponent } from './views/topic-detail-page/topic-detail-page.component';
 import { TopicBoxComponent } from './components/topic-box/topic-box.component';
 import { SelectedTopicDisplayComponent } from './components/selected-topic-display/selected-topic-display.component';
 
@@ -14,9 +15,10 @@ import { SelectedTopicDisplayComponent } from './components/selected-topic-displ
   declarations: [
     AppComponent,
     HomepageComponent,
+    TopicDetailPageComponent,
+    PageNotFoundComponent,
     TopicBoxComponent,
-    SelectedTopicDisplayComponent,
-    PageNotFoundComponent
+    SelectedTopicDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,9 @@ import { SelectedTopicDisplayComponent } from './components/selected-topic-displ
       {
         path: '',
         component: HomepageComponent
+      },{
+        path: 'topic/:name',
+        component: TopicDetailPageComponent
       },{
         path: '**',
         component: PageNotFoundComponent,

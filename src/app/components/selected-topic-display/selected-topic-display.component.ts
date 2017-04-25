@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Topic } from '../../data/topics/topics-model';
 
@@ -8,9 +9,13 @@ import { Topic } from '../../data/topics/topics-model';
   styleUrls: ['./selected-topic-display.component.scss']
 })
 export class SelectedTopicDisplayComponent {
-  constructor() { }
+  constructor(private router: Router) { }
   @Input() selectedTopic: Topic;
   @Output() onResetSelectedTopic = new EventEmitter;
+
+  navigateToTopic(topicRoute){
+  	this.router.navigate(['/topic', topicRoute]);
+  }
 
 	resetSelectedTopic() {
 		this.onResetSelectedTopic.emit();

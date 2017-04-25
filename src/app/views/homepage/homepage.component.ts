@@ -10,19 +10,16 @@ import { TopicService } from '../../services/topic.service';
 })
 export class HomepageComponent implements OnInit {
 	constructor(private topicService: TopicService) { };
-
-  topics = this.topicService.getTopics();
   selectedTopic: Topic;
+  topics = [];
 
   ngOnInit() {
-
+    this.topicService.getTopics().then(topics => this.topics = topics);
   }
 
   selectTopic(topic: Topic) {
     this.selectedTopic = topic;
-    
-
-  	console.log('This is the topic I am selecting', this.selectedTopic);
+    console.log('This is the topic I am selecting', this.selectedTopic);
   }
 
   resetSelectedTopic() {
