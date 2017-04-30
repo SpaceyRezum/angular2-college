@@ -1,8 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
+
+import { NgModule, 
+         animate, 
+         state, 
+         style, 
+         transition, 
+         trigger } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
@@ -24,6 +30,7 @@ import { SelectedTopicDisplayComponent } from './components/selected-topic-displ
     BrowserModule,
     FormsModule,
     HttpModule,
+
     RouterModule.forRoot([
       {
         path: '',

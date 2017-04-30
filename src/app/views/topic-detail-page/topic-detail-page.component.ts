@@ -25,11 +25,7 @@ export class TopicDetailPageComponent implements OnInit {
   	this.retrieveTopicDetails(this.topicName);
   }
 
-  retrieveTopicDetails(topicName) {
-  	this.topicService.getTopics(topicName)
-  	.then(topic => {
-      this.topicToDisplay = topic[0];
-    })
-  	.catch(err => this.router.navigate(['/page-not-found']));
+  retrieveTopicDetails(topicName) {  	
+    this.topicToDisplay = this.topicService.getSpecificTopic(topicName);
   }
 }

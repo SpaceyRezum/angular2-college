@@ -4,12 +4,12 @@ import { TOPICS } from '../data/topics/topics-content';
 
 @Injectable()
 export class TopicService {
-  getTopics(topicName): Promise<Topic[]> {
-  	if (topicName) {
-  		let topic = TOPICS.filter(topic => topic.urlName === topicName);
-  		return Promise.resolve(topic)
-  	} else {
- 			return Promise.resolve(TOPICS);
- 		}
+  getTopics(): Promise<Topic[]> {
+		return Promise.resolve(TOPICS);
+	}
+
+	getSpecificTopic(topicName): any {
+		let filteredTopicArray = TOPICS.filter(topic => topic.urlName === topicName);
+		return filteredTopicArray[0];
 	}
 }
