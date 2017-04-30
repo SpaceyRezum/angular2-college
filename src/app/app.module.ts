@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 import { TopicDetailPageComponent } from './views/topic-detail-page/topic-detail-page.component';
 import { TopicBoxComponent } from './components/topic-box/topic-box.component';
 import { SelectedTopicDisplayComponent } from './components/selected-topic-display/selected-topic-display.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SelectedTopicDisplayComponent } from './components/selected-topic-displ
     TopicDetailPageComponent,
     PageNotFoundComponent,
     TopicBoxComponent,
-    SelectedTopicDisplayComponent
+    SelectedTopicDisplayComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

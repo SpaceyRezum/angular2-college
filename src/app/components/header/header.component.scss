@@ -1,0 +1,23 @@
+.header-background {
+	background-image: url(/assets/images/student-study-group.jpg);
+	background-size: cover;
+	background-position: 50%;
+	height: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	
+	.logo-container {
+		margin: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		a {
+			margin-top: 20px;
+			text-align: center;
+			color: white;
+		}
+	}
+	
+}
