@@ -1,8 +1,15 @@
-<div class="selected-topic-container" *ngIf="selectedTopic">
+<div 
+	class="selected-topic-container" *ngIf="selectedTopic" [@animateSelectedTopic]="selectedTopicState">
 	<h2>{{selectedTopic.name}} details!</h2>
 	<div><span>color: </span>{{selectedTopic.color}}</div>
 	<div><span>id: </span>{{selectedTopic.id}}</div>
 	<p>{{selectedTopic.content}}</p>
-	<button (click)="navigateToTopic(selectedTopic.urlName)">Read more about it</button>
-	<button (click)="resetSelectedTopic()">Reset Selected Topic</button>
+	<button class="hollow button"
+		(click)="navigateToTopic(selectedTopic.urlName)">
+		Read more about it
+	</button>
+	<button class="hollow button warning"
+		(click)="resetSelectedTopic()">
+		Reset Selected Topic
+	</button>
 </div>

@@ -4,6 +4,8 @@
 <div class="topic-content-container">
 	<p>Lorem ipsum</p>
 </div>
-<div class="topic-button-container" [ngStyle]="{'background-color': topic.color}">
-	<button (click)="selectTopic(topic)">Expand details</button>
-</div>
+<button 
+	class="topic-button-container hollow button"
+	(click)="selectTopic(topic)">
+		Expand details
+</button>

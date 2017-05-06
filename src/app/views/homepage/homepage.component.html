@@ -1,13 +1,17 @@
 <h1>
-  Welcome to NAB College, what can we help you with?
+  Welcome to NAB College<br/>
+  What can we help you with?
 </h1>
-<div class="topic-box">
-	<app-topic-box *ngFor="let topic of topics"
-		[topic]="topic"
-		(onSelectTopic)="selectTopic($event)">
-	</app-topic-box>
+<div class="topic-box expanded row">
+	<div class="small-3 columns" *ngFor="let topic of topics">
+		<app-topic-box 
+			[topic]="topic"
+			(onSelectTopic)="selectTopic($event)">
+		</app-topic-box>
+	</div>
 </div>
-<app-selected-topic-display 
+<app-selected-topic-display #f class="small-10 small-centered columns"
 	[selectedTopic]="selectedTopic"
-	(onResetSelectedTopic)="resetSelectedTopic($event)">
+	(onResetSelectedTopic)="resetSelectedTopic($event)"
+	[selectedTopicState]="selectedTopicState">
 </app-selected-topic-display>

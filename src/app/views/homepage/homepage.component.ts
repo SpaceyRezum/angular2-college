@@ -12,6 +12,7 @@ export class HomepageComponent implements OnInit {
 	constructor(private topicService: TopicService) { };
   selectedTopic: Topic;
   topics = [];
+  selectedTopicState: string = 'unselected';
 
   ngOnInit() {
     this.topicService.getTopics().then(topics => this.topics = topics);
@@ -24,6 +25,6 @@ export class HomepageComponent implements OnInit {
 
   resetSelectedTopic() {
   	this.selectedTopic = null;
-  	console.log('Topic unselected');  
+  	console.log('Topic unselected');
   }
 };
