@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { animate, state, transition, style, trigger } from '@angular/core';
-
+declare let $: any;
 
 import { Topic } from '../../data/topics/topics-model';
 
@@ -18,6 +18,7 @@ import { Topic } from '../../data/topics/topics-model';
             opacity: 1
         })),
         transition('unselected => selected', animate('0.3s ease-in-out')),
+        transition('selected => unselected', animate('0.3s ease-in-out'))
     ])
   ]
 })
@@ -40,10 +41,18 @@ export class SelectedTopicDisplayComponent {
 
 	resetSelectedTopic() {
     this.selectedTopicState = 'unselected';
-    setTimeout(() => this.onResetSelectedTopic.emit(), 400);
+    this.scrollToTop();
+    setTimeout(() => this.onResetSelectedTopic.emit(), 1000);
 	}
 
   animateSelectedTopic() {
     this.selectedTopicState = 'selected';
+  }
+
+  scrollToTop() {
+    console.log('scrolling to top');
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800);
   }
 }

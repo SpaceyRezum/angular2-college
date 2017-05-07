@@ -1,5 +1,5 @@
 <div 
-	class="selected-topic-container" *ngIf="selectedTopic" [@animateSelectedTopic]="selectedTopicState">
+	id="selected-topic-container" *ngIf="selectedTopic" [@animateSelectedTopic]="selectedTopicState">
 	<h2>{{selectedTopic.name}} details!</h2>
 	<div><span>color: </span>{{selectedTopic.color}}</div>
 	<div><span>id: </span>{{selectedTopic.id}}</div>
