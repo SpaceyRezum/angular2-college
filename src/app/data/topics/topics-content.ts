@@ -1,31 +1,31 @@
 import { Topic } from './topics-model';
 
 export const TOPICS: Topic[] = [
-	{ name: 'Second Education', 
-		urlName: 'second-education', 
+	{ name: 'Change your Career', 
+		urlName: 'change-career', 
 		color: '#2f7b15', 
-		content: 'This is the content for Second Education Topic Box', 
+		content: 'This is the content for "Change your Career"', 
 		imgUrl: 'img.jpg', 
 		id: 1 
 	},{ 
-		name: 'English as Second Language', 
+		name: 'Learn English', 
 		urlName: 'english-as-second-language',
 		color: '#0091ca', 
-		content: 'This is the content for ESL Topic Box', 
+		content: 'This is the content for "Learn English"', 
 		imgUrl: 'img.jpg', 
 		id: 2 
 	},{ 
-		name: 'Third Education', 
-		urlName: 'third-education',
+		name: 'Travel & Study in Canada', 
+		urlName: 'travel-study-canada',
 		color: '#756ddd', 
-		content: 'This is the content for Third Education Topic Box', 
+		content: 'This is the content for "Travel & Study in Canada"', 
 		imgUrl: 'img.jpg', 
 		id: 3 
 	},{ 
-		name: 'English as Third Language', 
-		urlName: 'english-as-third-language',
+		name: 'We train your employees', 
+		urlName: 'employee-training',
 		color: '#b74700', 
-		content: 'This is the content for English as Third Language Topic Box', 
+		content: 'This is the content for "we train your employees"', 
 		imgUrl: 'img.jpg', 
 		id: 4 
 	}

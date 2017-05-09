@@ -6,6 +6,7 @@
 	<div class="small-3 columns" *ngFor="let topic of topics">
 		<app-topic-box 
 			[topic]="topic"
+			[selectedTopic]="selectedTopic"
 			(onSelectTopic)="selectTopic($event)">
 		</app-topic-box>
 	</div>

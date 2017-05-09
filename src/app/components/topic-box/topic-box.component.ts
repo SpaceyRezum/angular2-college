@@ -10,8 +10,21 @@ import { Topic } from '../../data/topics/topics-model';
 export class TopicBoxComponent {
   constructor() { }
   @Input() topic: Topic;
+  @Input() selectedTopic: Topic;
   @Output() onSelectTopic = new EventEmitter();
+
   selectTopic(topic) {
   	this.onSelectTopic.emit(topic);
   };
+
+  checkIfSelectedTopic() {
+  	if (!this.selectedTopic) {
+  		// if selectedTopic not yet selected, I want all my components to keep their color, hence true.
+  		return true;
+  	} else if (this.topic === this.selectedTopic) {
+  		return true;
+  	} else {
+  		return false;
+  	}
+  }
 }

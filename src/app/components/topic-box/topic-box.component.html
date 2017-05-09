@@ -1,4 +1,6 @@
-<div class="topic-title-container" [ngStyle]="{'background-color': topic.color}">
+<div 
+	class="topic-title-container" 
+	[ngStyle]="checkIfSelectedTopic() ? {'background-color': topic.color} : {'background-color': 'gray'}">
 	<h2>{{topic.name}}</h2>
 </div>
 <div class="topic-content-container">
