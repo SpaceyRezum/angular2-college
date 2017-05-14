@@ -1,3 +1,19 @@
+.topic-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	cursor: pointer;
+
+	color: #efefef;
+	
+	&:hover {
+		border: 3px rgba(6, 63, 204, 0.50) solid;
+	}
+}
+
 .topic-title-container {
 	width: 100%;
 	padding: 1em 0;
@@ -8,8 +24,10 @@
 	}
 }
 
-.topic-button-container {
+.custom-topic-button {
 	position: absolute;
 	bottom: 0px;
 	cursor: pointer;
+	border: #efefef 3px solid;
+	color: #efefef;
 }

@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
-import { Ng2SimplePageScrollModule } from 'ng2-simple-page-scroll';
 
 import { NgModule, 
          animate, 
@@ -33,7 +32,6 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2SimplePageScrollModule.forRoot(),
     RouterModule.forRoot([
       {
         path: '',

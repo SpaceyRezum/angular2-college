@@ -3,11 +3,12 @@ h1 {
 	padding: 40px;
 }
 
-.topic-box {
+.topic-box-container {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+	flex-wrap: wrap;
 
 	app-topic-box {
 		position: relative;
@@ -20,7 +21,16 @@ h1 {
 
 		border: 1px solid #767676;
 		overflow: hidden;
-		margin: 0 2%;
+		margin: 2% 0%;
 		height: 400px;
+
+		// background image is being set within the html template
+		background-size: cover;
+
+		&.topic-unselected {
+			-webkit-filter: grayscale(100%);
+		  filter: grayscale(100%);
+			opacity: 0.4;
+		}
 	}
 }

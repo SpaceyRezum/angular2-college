@@ -1,13 +1,12 @@
-<div 
-	class="topic-title-container" 
-	[ngStyle]="checkIfSelectedTopic() ? {'background-color': topic.color} : {'background-color': 'gray'}">
-	<h2>{{topic.name}}</h2>
+<div class="topic-container" (click)="selectTopic(topic)">
+	<div class="topic-title-container">
+		<h2>{{topic.name}}</h2>
+	</div>
+	<div class="topic-content-container">
+		<p>Lorem ipsum</p>
+	</div>
+	<button 
+		class="custom-topic-button hollow button">
+			Expand details
+	</button>
 </div>
-<div class="topic-content-container">
-	<p>Lorem ipsum</p>
-</div>
-<button 
-	class="topic-button-container hollow button"
-	(click)="selectTopic(topic)">
-		Expand details
-</button>

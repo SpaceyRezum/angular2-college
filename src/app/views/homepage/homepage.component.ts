@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Topic } from '../../data/topics/topics-model';
 import { TopicService } from '../../services/topic.service';
-import { SimplePageScrollService } from 'ng2-simple-page-scroll';
 declare let $: any;
 
 @Component({
@@ -25,6 +24,17 @@ export class HomepageComponent implements OnInit {
     console.log('This is the topic I am selecting', this.selectedTopic);
     this.scrollToSelectedTopicContainer();
   }
+
+  checkIfSelectedTopic(topic) {
+  if (!this.selectedTopic) {
+    // if selectedTopic not yet selected, I want all my components to keep their color, hence true.
+    return true;
+  } else if (topic === this.selectedTopic) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
   resetSelectedTopic() {
     this.selectedTopic = null;

@@ -2,9 +2,11 @@
   Welcome to NAB College<br/>
   What can we help you with?
 </h1>
-<div class="topic-box expanded row">
-	<div class="small-3 columns" *ngFor="let topic of topics">
+<div class="topic-box-container expanded row">
+	<div class="small-12 medium-6 large-3 columns" *ngFor="let topic of topics">
 		<app-topic-box 
+			[ngClass]="checkIfSelectedTopic(topic) ? 'topic-with-color' : 'topic-unselected'"
+			[ngStyle]="{ 'background-image': 'url(' + topic.imgUrl + ')'}"
 			[topic]="topic"
 			[selectedTopic]="selectedTopic"
 			(onSelectTopic)="selectTopic($event)">
