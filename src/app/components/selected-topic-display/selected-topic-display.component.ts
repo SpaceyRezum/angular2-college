@@ -50,9 +50,8 @@ export class SelectedTopicDisplayComponent {
   }
 
   scrollToTop() {
-    console.log('scrolling to top');
     $('html, body').animate({
-        scrollTop: 0
+        scrollTop: $('.topic-box-container').offset().top
     }, 800);
   }
 }
