@@ -1,15 +1,35 @@
 <div 
-	id="selected-topic-container" *ngIf="selectedTopic" [@animateSelectedTopic]="selectedTopicState">
-	<h2>{{selectedTopic.name}} details!</h2>
-	<div><span>color: </span>{{selectedTopic.color}}</div>
-	<div><span>id: </span>{{selectedTopic.id}}</div>
-	<p>{{selectedTopic.content}}</p>
-	<button class="hollow button"
-		(click)="navigateToTopic(selectedTopic.urlName)">
-		Read more about it
-	</button>
-	<button class="hollow button warning"
-		(click)="resetSelectedTopic()">
-		Reset Selected Topic
-	</button>
+ 	*ngIf="selectedTopic" id="selected-topic-container"
+ 	class="row small-12 column"
+	[@animateSelectedTopic]="selectedTopicState">
+	<h2>{{selectedTopic.name}}</h2>
+	
+	<div class="detail-list-container small-10">
+		<div class="advantage-container" *ngFor="let advantage of selectedTopic.content.advantages">
+			<img class="advantage-icon" src={{advantage.icon}}/>
+			<div class="advantage-content">
+				<h3>{{advantage.title}}</h3>
+				<div *ngFor="let idea of advantage.ideas">
+					<p>{{idea}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<h4>Want to know more about our program?</h4>
+	<div class="contact-button-container small-8 medium-4 large-4">
+		<button class="hollow button success">
+			Let us contact you!
+		</button>
+
+		<button class="hollow button"
+			(click)="navigateToTopic(selectedTopic.urlName)">
+			Read more about it!
+		</button>
+	</div>
+
+		<button class="hollow button warning"
+			(click)="resetSelectedTopic()">
+			Go back to top
+		</button>
 </div>

@@ -1,9 +1,12 @@
+<div class="background-image" [ngStyle]="{ 'background-image': 'url(' + topic.imgUrl + ')'}"></div>
 <div class="topic-container" (click)="selectTopic(topic)">
 	<div class="topic-title-container">
 		<h2>{{topic.name}}</h2>
 	</div>
 	<div class="topic-content-container">
-		<p>Lorem ipsum</p>
+		<ul *ngFor="let advantage of topic.content.advantages">
+			<li>{{advantage.title}}</li>
+		</ul>
 	</div>
 	<button 
 		class="custom-topic-button hollow button">

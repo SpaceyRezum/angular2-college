@@ -6,7 +6,6 @@
 	<div class="small-12 medium-6 large-3 columns" *ngFor="let topic of topics">
 		<app-topic-box 
 			[ngClass]="checkIfSelectedTopic(topic) ? 'topic-with-color' : 'topic-unselected'"
-			[ngStyle]="{ 'background-image': 'url(' + topic.imgUrl + ')'}"
 			[topic]="topic"
 			[selectedTopic]="selectedTopic"
 			(onSelectTopic)="selectTopic($event)">

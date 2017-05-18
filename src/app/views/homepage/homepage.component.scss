@@ -11,6 +11,7 @@ h1 {
 	flex-wrap: wrap;
 
 	app-topic-box {
+		z-index: 1;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -29,7 +30,10 @@ h1 {
 
 		&.topic-unselected {
 			-webkit-filter: grayscale(100%);
-		  filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			filter: grayscale(100%);
 			opacity: 0.4;
 		}
 	}
