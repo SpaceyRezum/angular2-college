@@ -1,6 +1,5 @@
-<div 
- 	*ngIf="selectedTopic" id="selected-topic-container"
- 	class="row small-12 column"
+<div *ngIf="selectedTopic"
+	class="row small-12 column" id="selected-topic-container"
 	[@animateSelectedTopic]="selectedTopicState">
 	<h2>{{selectedTopic.name}}</h2>
 	
@@ -18,18 +17,23 @@
 	
 	<h4>Want to know more about our program?</h4>
 	<div class="contact-button-container small-8 medium-4 large-4">
-		<button class="hollow button success">
+		<button class="button success" (click)="toggleContactFormOverlay()">
 			Let us contact you!
 		</button>
 
-		<button class="hollow button"
+		<button class="button"
 			(click)="navigateToTopic(selectedTopic.urlName)">
 			Read more about it!
 		</button>
 	</div>
+	
+	<div class="overlay-window" 
+		[ngClass]="contactFormOverlayDisplayed ? 'show' : 'hide'">
+		<app-contact-form class="row colum small-6"></app-contact-form>
+	</div>
 
-		<button class="hollow button warning"
-			(click)="resetSelectedTopic()">
-			Go back to top
-		</button>
+	<button class="hollow button warning"
+		(click)="resetSelectedTopic()">
+		Go back to top
+	</button>
 </div>

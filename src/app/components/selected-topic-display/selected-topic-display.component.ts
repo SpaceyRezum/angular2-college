@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { animate, state, transition, style, trigger } from '@angular/core';
 declare let $: any;
@@ -24,15 +24,30 @@ import { Topic } from '../../data/topics/topics-model';
 })
 export class SelectedTopicDisplayComponent {
   constructor(private router: Router) { }
+  contactFormOverlayDisplayed: boolean = false; 
   @Input() selectedTopicState: string;
   @Input() selectedTopic: Topic;
   @Output() onResetSelectedTopic = new EventEmitter;
+  
+  @HostListener('document:keydown', ['$event'])
+  disableContactFormOverlayOnEscape(event: KeyboardEvent) {
+    if (this.contactFormOverlayDisplayed) {
+      let x = event.keyCode;
+      if (x === 27) {
+        this.contactFormOverlayDisplayed = !this.contactFormOverlayDisplayed;  
+      }  
+    }
+  }
 
   ngOnChanges() {
     if (this.selectedTopic) {
       this.selectedTopicState = 'unselected';
       setTimeout(() => this.animateSelectedTopic(), 100);
     }
+  }
+
+  toggleContactFormOverlay() {
+    this.contactFormOverlayDisplayed = !this.contactFormOverlayDisplayed;
   }
 
   navigateToTopic(topicRoute) {
