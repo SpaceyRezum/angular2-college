@@ -15,10 +15,19 @@ import { Topic } from '../../data/topics/topics-model';
           opacity: 0
         })),
         state('selected', style({
-            opacity: 1
+          opacity: 1
         })),
         transition('unselected => selected', animate('0.3s ease-in-out')),
         transition('selected => unselected', animate('0.3s ease-in-out'))
+    ]),
+    trigger('animateContactFormOverlay', [
+        state('false', style({
+          opacity: 0, transform: 'scale(0.0)'
+        })),
+        state('true', style({
+          opacity: 1, transform: 'scale(1.0)'
+        })),
+        transition('* => *', animate('0.3s ease-in-out')),
     ])
   ]
 })
@@ -34,7 +43,7 @@ export class SelectedTopicDisplayComponent {
     if (this.contactFormOverlayDisplayed) {
       let x = event.keyCode;
       if (x === 27) {
-        this.contactFormOverlayDisplayed = !this.contactFormOverlayDisplayed;  
+        this.contactFormOverlayDisplayed = false;
       }  
     }
   }

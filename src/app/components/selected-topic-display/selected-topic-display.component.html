@@ -27,8 +27,8 @@
 		</button>
 	</div>
 	
-	<div class="overlay-window" 
-		[ngClass]="contactFormOverlayDisplayed ? 'show' : 'hide'">
+	<div class="overlay-window"
+		[@animateContactFormOverlay]="contactFormOverlayDisplayed">
 		<app-contact-form class="row colum small-6"></app-contact-form>
 	</div>
 
@@ -37,3 +37,5 @@
 		Go back to top
 	</button>
 </div>
+
+<!-- [ngClass]="contactFormOverlayDisplayed ? 'show' : 'hide'" -->
