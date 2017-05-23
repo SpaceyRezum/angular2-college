@@ -21,15 +21,14 @@
 			Let us contact you!
 		</button>
 
-		<button class="button"
-			(click)="navigateToTopic(selectedTopic.urlName)">
+		<button class="button" (click)="navigateToTopic(selectedTopic.urlName)">
 			Read more about it!
 		</button>
 	</div>
 	
 	<div class="overlay-window"
 		[@animateContactFormOverlay]="contactFormOverlayDisplayed">
-		<app-contact-form class="row colum small-6"></app-contact-form>
+		<app-contact-form class="row colum small-6" (onOverlayCloseButtonClick)="toggleContactFormOverlay($event)"></app-contact-form>
 	</div>
 
 	<button class="hollow button warning"
@@ -37,5 +36,3 @@
 		Go back to top
 	</button>
 </div>
-
-<!-- [ngClass]="contactFormOverlayDisplayed ? 'show' : 'hide'" -->

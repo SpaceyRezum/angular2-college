@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
-
   constructor() { }
+	@Output() onOverlayCloseButtonClick = new EventEmitter();
 
-  ngOnInit() {
-  }
-
+	closeOverlay() {
+		this.onOverlayCloseButtonClick.emit();
+	}
 }
