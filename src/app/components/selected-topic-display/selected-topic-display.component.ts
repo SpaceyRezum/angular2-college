@@ -27,7 +27,8 @@ import { Topic } from '../../data/topics/topics-model';
         state('true', style({
           opacity: 1, transform: 'scale(1.0)'
         })),
-        transition('* => *', animate('0.3s ease-in-out')),
+        transition('0 => 1', animate('0.3s ease-in-out')),
+        transition('1 => 0', animate('0.3s ease-in-out'))
     ])
   ]
 })
