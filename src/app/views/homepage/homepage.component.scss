@@ -1,6 +1,22 @@
-h1 {
-	text-align: center;
-	padding: 40px;
+.homepage-video-container {
+	height: 25rem;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	overflow: hidden;
+	position: relative;
+
+	video {
+		position: absolute;
+		bottom: -75%;
+		width: 100%;
+	}
+
+	h1 {
+		color: white;
+		z-index: 2;
+		text-align: center;
+	}
 }
 
 .topic-box-container {

@@ -1,7 +1,12 @@
-<h1>
-  Welcome to NAB College<br/>
-  What can we help you with?
-</h1>
+<div class="homepage-video-container row expanded">
+	<video autoplay loop poster="assets/images/header-video-fallback.png">
+	    <source src="assets/video/nab.mp4"  type="video/mp4" />
+	    	<img src="assets/images/header-video-fallback.png" title="Toronto skyline with sunny landscape" /> 
+	</video>
+	<h1>Welcome to North American Business College</h1>
+</div>
+
+
 <div class="topic-box-container expanded row">
 	<div class="small-12 medium-6 large-3 columns" *ngFor="let topic of topics">
 		<app-topic-box 
@@ -12,6 +17,8 @@
 		</app-topic-box>
 	</div>
 </div>
+
+
 <app-selected-topic-display class="small-10 small-centered columns"
 	[selectedTopic]="selectedTopic"
 	[selectedTopicState]="selectedTopicState"

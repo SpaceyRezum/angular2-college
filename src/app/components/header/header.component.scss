@@ -1,23 +1,41 @@
-.header-background {
-	background-image: url(/assets/images/smaller-student-study-group.jpg);
-	background-size: cover;
-	background-position: 50%;
-	height: 200px;	
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	
-	.logo-container {
-		margin: 20px;
+$header-height: 5rem;
+$header-blue: #385caf;
+
+.header-container {
+	height: $header-height;
+	margin-bottom: 1rem;
+
+	a {
+		cursor: pointer;
+		height: $header-height;
 		display: flex;
-		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		a {
-			margin-top: 20px;
-			text-align: center;
-			color: white;
+		text-align: center;
+		font-family: TisaOT-Bold;
+		color: $header-blue;
+		font-weight: 900;
+
+		.logo-container {
+			height: $header-height;
+
+			img {
+				height: $header-height;
+			}
+		}
+
+		p {
+			margin: 1rem 0 0 2rem;
+		}
+
+		&.about-us-link {
+			font-size: 1.4rem;
+			transition: background-color 1s ease;
+
+			&:hover {
+				color: white;
+				background: $header-blue;
+			}	
 		}
 	}
-	
 }
