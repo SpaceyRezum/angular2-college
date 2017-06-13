@@ -1,8 +1,10 @@
 <div *ngIf="selectedTopic"
 	class="row small-12 column" id="selected-topic-container"
 	[@animateSelectedTopic]="selectedTopicState">
-	<h2>{{selectedTopic.name}}</h2>
-	
+	<div [ngStyle]="{ 'background-image': 'url(' + selectedTopic.imgUrl + ')' }" class="selected-topic-name-container">
+		<h2>{{selectedTopic.name}}</h2>
+	</div>
+
 	<div class="detail-list-container small-10">
 		<div class="advantage-container" *ngFor="let advantage of selectedTopic.content.advantages">
 			<img class="advantage-icon" src={{advantage.icon}}/>

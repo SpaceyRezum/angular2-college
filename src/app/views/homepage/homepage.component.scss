@@ -19,6 +19,16 @@
 	}
 }
 
+.welcome-sentence-container {
+	height: 12rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h2 {
+		text-align: center;
+	}
+}
+
 .topic-box-container {
 	width: 100%;
 	display: flex;
@@ -36,13 +46,9 @@
 		
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
-		border: 1px solid #767676;
 		overflow: hidden;
 		margin: 2% 0%;
-		height: 400px;
-
-		// background image is being set within the html template
-		background-size: cover;
+		height: 20rem;
 
 		&.topic-unselected {
 			-webkit-filter: grayscale(100%);

@@ -1,6 +1,5 @@
-<div class="background-image" [ngStyle]="{ 'background-image': 'url(' + topic.imgUrl + ')'}"></div>
 <div class="topic-container" (click)="selectTopic(topic)">
-	<div class="topic-title-container">
+	<div class="topic-title-container" [ngStyle]="{ 'background-color': topic.color}">
 		<h2>{{topic.name}}</h2>
 	</div>
 	<div class="topic-content-container">
