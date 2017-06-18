@@ -18,6 +18,7 @@ import { TopicBoxComponent } from './components/topic-box/topic-box.component';
 import { SelectedTopicDisplayComponent } from './components/selected-topic-display/selected-topic-display.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     TopicBoxComponent,
     SelectedTopicDisplayComponent,
     HeaderComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

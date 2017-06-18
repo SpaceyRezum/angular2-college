@@ -6,11 +6,11 @@
 	</div>
 
 	<div class="row columns detail-container"> 
-		<div class="detail-image-container hide-for-small medium-5 float-left">
+		<div class="detail-image-container hide-for-small medium-5 column">
 			<img src={{selectedTopic.imgUrl}} />
 		</div>
 		
-		<div class="detail-content-container small-12 medium-7 float-right">
+		<div class="detail-content-container small-12 medium-7 column">
 			<div class="advantage-container" *ngFor="let advantage of selectedTopic.content.advantages">
 				<img class="advantage-icon" src={{advantage.icon}}/>
 				<div class="advantage-content">

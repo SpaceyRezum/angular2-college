@@ -1,0 +1,35 @@
+// currently black
+$footer-background-color: #161616;
+
+// currently blue like the logo
+$footer-title-color: #6387d6;
+
+// currently white
+$footer-content-color: #fff;
+
+
+.footer-container {
+	padding: 2rem 0 1rem 0;
+	background-color: $footer-background-color;
+	color: $footer-content-color;
+	
+	.footer-logo-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.contact-info-container,
+	.location-info-container,
+	.connect-info-container {
+		text-align: left;
+
+		h5, a {
+			color: $footer-title-color;
+		}
+	}
+
+	.copyright-container {
+		margin-top: .5rem;
+		text-align: center;
+	}
+}
