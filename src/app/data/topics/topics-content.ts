@@ -13,10 +13,7 @@ export const TOPICS: Topic[] = [
 			},{
 				title: 'On-Demand Positions',
 				icon: '/assets/images/svg/customer-service.svg',
-				ideas: [
-					'Our Diploma programs provide the skills for on demand positions in the Canadian economy.', 
-					'Employers are looking for skilled worker with diplomas in the programs we offer.'
-					]
+				ideas: ['Our Diploma programs provide the skills for on demand positions in the Canadian economy.']
 			},{
 				title: 'Laid Off? Potentially Study for Free',
 				icon: '/assets/images/svg/get-money.svg',

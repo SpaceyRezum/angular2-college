@@ -1,31 +1,41 @@
 <div *ngIf="selectedTopic"
 	class="row small-12 column" id="selected-topic-container"
 	[@animateSelectedTopic]="selectedTopicState">
-	<div [ngStyle]="{ 'background-image': 'url(' + selectedTopic.imgUrl + ')' }" class="selected-topic-name-container">
+	<div class="selected-topic-name-container small-12">
 		<h2>{{selectedTopic.name}}</h2>
 	</div>
 
-	<div class="detail-list-container small-10">
-		<div class="advantage-container" *ngFor="let advantage of selectedTopic.content.advantages">
-			<img class="advantage-icon" src={{advantage.icon}}/>
-			<div class="advantage-content">
-				<h3>{{advantage.title}}</h3>
-				<div *ngFor="let idea of advantage.ideas">
-					<p>{{idea}}</p>
+	<div class="row columns detail-container"> 
+		<div class="detail-image-container hide-for-small medium-5 float-left">
+			<img src={{selectedTopic.imgUrl}} />
+		</div>
+		
+		<div class="detail-content-container small-12 medium-7 float-right">
+			<div class="advantage-container" *ngFor="let advantage of selectedTopic.content.advantages">
+				<img class="advantage-icon" src={{advantage.icon}}/>
+				<div class="advantage-content">
+					<h3>{{advantage.title}}</h3>
+					<div *ngFor="let idea of advantage.ideas">
+						<p>{{idea}}</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<h4>Want to know more about our program?</h4>
-	<div class="contact-button-container small-8 medium-4 large-4">
-		<button class="button success" (click)="toggleContactFormOverlay()">
-			Let us contact you!
-		</button>
 
-		<button class="button" (click)="navigateToTopic(selectedTopic.urlName)">
-			Read more about it!
-		</button>
+	<div class="action-buttons-container row columns">
+		<h4>Want to know more about our program?</h4>
+		<div class="small-6">
+			<button class="button success" (click)="toggleContactFormOverlay()">
+				Let us contact you!
+			</button>
+
+			<button class="hollow button warning"
+				(click)="resetSelectedTopic()">
+				Go back to top
+			</button>
+		</div>
 	</div>
 	
 	<div class="overlay-window"
@@ -33,8 +43,4 @@
 		<app-contact-form class="row colum small-6" (onOverlayCloseButtonClick)="toggleContactFormOverlay($event)"></app-contact-form>
 	</div>
 
-	<button class="hollow button warning"
-		(click)="resetSelectedTopic()">
-		Go back to top
-	</button>
 </div>
