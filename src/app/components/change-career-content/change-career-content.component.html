@@ -1,0 +1,65 @@
+<div class="row expanded selected-topic-content-container">
+  <div class="small-12 medium-6 column second-career-intro-container">
+  	<p>First, let’s see if you qualify for the Government “Second Career Program”<sup>*</sup>.</p>
+  	<p class="second-career-explanation">
+  		<sup>*</sup><span>This program allows you to study for free and receive up to CAD 28,000 in Government Support.</span>
+  	</p>
+	</div>
+  
+  <div class="small-12 medium-6 column second-career-input-container">
+  	<form>
+  		<p>Check the statements that apply.</p>
+	  	<div class="second-career-checkbox">
+	  		<label for="question1">
+	  			In the past 4 years, you have been laid off from a fulltime job in Ontario.
+  			</label>
+	  		<input 
+	  			id="question1" type="checkbox"
+	  			(change)="switchQualifyForProgramQuestion(1)" />
+			</div>
+			
+			<div class="second-career-checkbox">
+				<label for="question2">
+					Currently, you are either unemployed, working fewer than 20 hours per week or simply underemployed.
+				</label>
+	  		<input 
+	  			id="question2" type="checkbox" 
+	  			(change)="switchQualifyForProgramQuestion(2)" />
+			</div>
+
+			<div class="second-career-checkbox">
+				<label for="question3">
+					You are interested in training for a new career in Ontario.
+				</label>
+	  		<input 
+	  			id="question3" type="checkbox" 
+	  			(change)="switchQualifyForProgramQuestion(3)" />
+			</div>
+			<button class="button" (click)="checkIfQualify()">
+				See if you qualify!
+			</button>
+  	</form>
+  </div>
+
+  <div class="small-12 column second-career-result-container">
+  	<div *ngIf="(qualifyForProgram === 'yes')">
+  		<p>Good news, based on your answers, it appears that you qualify to study for free one of the following diploma!</p>
+  		<ul class="diploma-list">
+  			<li>Medical Office Administration</li>
+  			<li>Accounting and Payroll Technician Diploma Program</li>
+  			<li>Teacher of English as a Second Language (TESL) Advance Diploma</li>
+  		</ul>
+  	</div>
+
+  	<div *ngIf="(qualifyForProgram === 'no')">
+  		<p>Unfortunately, it looks like you do not qualify for the “Second Career Program”!</p>
+  		<p><strong>But you might still be eligible for a scolarship up to 80%.</strong></p>
+  		<label for="scolarship-list">Select one that applies to you the most</label>
+  		<select [ngModel]="scolarshipSelected" (ngModelChange)="toggleCertificates($event)" id="scolarship-list">
+        <option [value]=""></option>
+  			<option *ngFor="let scolarship of listOfScolarships" [value]="scolarship">{{scolarship}}</option>
+  		</select>
+      <app-certificates-content *ngIf="showCertificates" [certificates]="certificateContent"></app-certificates-content>
+  	</div>
+  </div>
+</div>

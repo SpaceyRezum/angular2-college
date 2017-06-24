@@ -10,13 +10,13 @@ declare let $: any;
   providers: [ TopicService ]
 })
 export class HomepageComponent implements OnInit {
-	constructor(private topicService: TopicService) { };
+	constructor(private _topicService: TopicService) { };
   selectedTopic: Topic;
   topics = [];
   selectedTopicState: string = 'unselected';
 
   ngOnInit() {
-    this.topicService.getTopics().then(topics => this.topics = topics);
+    this._topicService.getTopics().then(topics => this.topics = topics);
   }
 
   selectTopic(topic: Topic) {

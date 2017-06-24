@@ -18,7 +18,7 @@ export class TopicDetailPageComponent implements OnInit {
   constructor(
   	private route: ActivatedRoute,
   	private router: Router, 
-  	private topicService: TopicService) { }
+  	private _topicService: TopicService) { }
 
   ngOnInit() {
   	this.topicName = this.route.snapshot.params['name'];
@@ -26,6 +26,6 @@ export class TopicDetailPageComponent implements OnInit {
   }
 
   retrieveTopicDetails(topicName) {  	
-    this.topicToDisplay = this.topicService.getSpecificTopic(topicName);
+    this.topicToDisplay = this._topicService.getSpecificTopic(topicName);
   }
 }

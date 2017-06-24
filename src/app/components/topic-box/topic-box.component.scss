@@ -1,4 +1,5 @@
 $button-color: #1779ba;
+$card-border-color: #5a5959;
 
 .topic-container {
 	z-index: 10;
@@ -25,15 +26,15 @@ $button-color: #1779ba;
   &::before {
     transform: scale3d(0, 1, 1);
     transform-origin: left top;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid $card-border-color;
+    border-bottom: 1px solid $card-border-color;
   }
 
   &::after {
     transform: scale3d(1, 0, 1);
     transform-origin: right top;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border-right: 1px solid $card-border-color;
+    border-left: 1px solid $card-border-color;
   }
 
   &:hover,

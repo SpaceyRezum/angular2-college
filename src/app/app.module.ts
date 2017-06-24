@@ -19,6 +19,8 @@ import { SelectedTopicDisplayComponent } from './components/selected-topic-displ
 import { HeaderComponent } from './components/header/header.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ChangeCareerContentComponent } from './components/change-career-content/change-career-content.component';
+import { CertificatesContentComponent } from './components/change-career-content/certificates-content/certificates-content.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FooterComponent } from './components/footer/footer.component';
     SelectedTopicDisplayComponent,
     HeaderComponent,
     ContactFormComponent,
-    FooterComponent
+    FooterComponent,
+    ChangeCareerContentComponent,
+    CertificatesContentComponent
   ],
   imports: [
     BrowserModule,

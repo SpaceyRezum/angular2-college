@@ -5,6 +5,7 @@
   align-items: center;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: 4rem;
 
 	video {
 		position: absolute;
@@ -12,19 +13,9 @@
 		width: 100%;
 	}
 
-	h1 {
+	.welcome-sentence-container {
 		color: white;
 		z-index: 2;
-		text-align: center;
-	}
-}
-
-.welcome-sentence-container {
-	height: 12rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	h2 {
 		text-align: center;
 	}
 }
