@@ -10,10 +10,10 @@ import { Certificate } from '../../../data/certificates/certificates-model';
 export class CertificatesContentComponent implements OnInit {
 
   constructor() { }
-  @Input() certificates: Certificate[];
+  @Input() certificateContent: Certificate[];
 
   ngOnInit() {
-  	
+
   }
 
 }

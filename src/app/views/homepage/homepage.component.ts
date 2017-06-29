@@ -21,7 +21,6 @@ export class HomepageComponent implements OnInit {
 
   selectTopic(topic: Topic) {
     this.selectedTopic = topic;
-    console.log('This is the topic I am selecting', this.selectedTopic);
     this.scrollToSelectedTopicContainer();
   }
 

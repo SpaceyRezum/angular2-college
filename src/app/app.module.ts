@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { TopicDetailPageComponent } from './views/topic-detail-page/topic-detail-page.component';
+import { DiplomaDetailPageComponent } from './views/diploma-detail-page/diploma-detail-page.component';
 import { TopicBoxComponent } from './components/topic-box/topic-box.component';
 import { SelectedTopicDisplayComponent } from './components/selected-topic-display/selected-topic-display.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -26,8 +27,9 @@ import { CertificatesContentComponent } from './components/change-career-content
   declarations: [
     AppComponent,
     HomepageComponent,
-    TopicDetailPageComponent,
     PageNotFoundComponent,
+    TopicDetailPageComponent,
+    DiplomaDetailPageComponent,
     TopicBoxComponent,
     SelectedTopicDisplayComponent,
     HeaderComponent,
@@ -47,6 +49,9 @@ import { CertificatesContentComponent } from './components/change-career-content
       },{
         path: 'topic/:name',
         component: TopicDetailPageComponent
+      },{
+        path: 'diploma/:title',
+        component: DiplomaDetailPageComponent
       },{
         path: '**',
         component: PageNotFoundComponent,

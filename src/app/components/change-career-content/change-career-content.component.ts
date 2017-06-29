@@ -1,16 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Certificate } from '../../data/certificates/certificates-model';
 import { CertificateService } from '../../services/certificate.service';
+import { Diploma } from '../../data/diplomas/diplomas-model';
+import { DiplomaService } from '../../services/diploma.service';
 
 
 @Component({
   selector: 'app-change-career-content',
   templateUrl: './change-career-content.component.html',
   styleUrls: ['./change-career-content.component.scss'],
-  providers: [ CertificateService ]
+  providers: [ CertificateService, DiplomaService ]
 })
 export class ChangeCareerContentComponent implements OnInit {
-  constructor(private _certificateService: CertificateService) { }
+  constructor(private _certificateService: CertificateService, private _diplomaService: DiplomaService) { }
   @Input() selectedTopic: any;
   questionToQualify: any = {
   	"question1" : false,
@@ -35,11 +37,14 @@ export class ChangeCareerContentComponent implements OnInit {
     "Full-time employee scholarship",
     "Ontario Academic excellence scholarship"
   ];
-  certificateContent: Certificate[]; 
+  diplomaContent: Diploma[];
+  certificateContent: Certificate[];
   showCertificates: boolean = false;
 
   ngOnInit() {
+    this.diplomaContent = this._diplomaService.getDiplomas();
     this.certificateContent = this._certificateService.getCertificates();
+    console.log(this.diplomaContent);
   }
 
   switchQualifyForProgramQuestion(questionKey) {

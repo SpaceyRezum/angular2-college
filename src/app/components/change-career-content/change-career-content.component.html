@@ -45,9 +45,9 @@
   	<div *ngIf="(qualifyForProgram === 'yes')">
   		<p>Good news, based on your answers, it appears that you qualify to study for free one of the following diploma!</p>
   		<ul class="diploma-list">
-  			<li>Medical Office Administration</li>
-  			<li>Accounting and Payroll Technician Diploma Program</li>
-  			<li>Teacher of English as a Second Language (TESL) Advance Diploma</li>
+  			<li *ngFor="let diploma of diplomaContent"> 
+          <a routerLink="/diploma/{{diploma.url}}">{{diploma.title}}</a>
+        </li>
   		</ul>
   	</div>
 
@@ -59,7 +59,7 @@
         <option [value]=""></option>
   			<option *ngFor="let scolarship of listOfScolarships" [value]="scolarship">{{scolarship}}</option>
   		</select>
-      <app-certificates-content *ngIf="showCertificates" [certificates]="certificateContent"></app-certificates-content>
+      <app-certificates-content *ngIf="showCertificates" [certificateContent]="certificateContent"></app-certificates-content>
   	</div>
   </div>
 </div>
