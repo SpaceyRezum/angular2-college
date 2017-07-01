@@ -26,9 +26,9 @@
 	
 	<div [ngSwitch]="selectedTopic.urlName">
 		<app-change-career-content *ngSwitchCase="'change-career'"></app-change-career-content>
-		<!-- <app-change-career-content *ngSwitchCase="'english-as-second-language'"></app-change-career-content> -->
-		<!-- <app-change-career-content *ngSwitchCase="'travel-study-canada'"></app-change-career-content> -->
-		<!-- <app-change-career-content *ngSwitchCase="'employee-training'"></app-change-career-content> -->
+		<app-english-as-second-language *ngSwitchCase="'english-as-second-language'"></app-english-as-second-language>
+		<app-travel-study-canada *ngSwitchCase="'travel-study-canada'"></app-travel-study-canada>
+		<app-employee-training *ngSwitchCase="'employee-training'"></app-employee-training>
 	</div>
 
 	<div class="action-buttons-container row columns">
