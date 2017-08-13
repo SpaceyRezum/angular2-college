@@ -1,0 +1,31 @@
+.overlay-window {
+  background-color: rgba(10, 10, 10, 0.7);
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  app-contact-form {
+  	overflow: scroll;
+		background: white;
+		height: 70vh;
+		position: relative;
+	}
+}
+
+.action-buttons-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    margin: 2% 0;
+    display: flex;
+    justify-content: space-around;  
+  }
+}

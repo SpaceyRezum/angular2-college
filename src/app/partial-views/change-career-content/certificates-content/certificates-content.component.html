@@ -1,8 +1,0 @@
-<div class="row expanded">
-	<div *ngFor="let certificateCategory of certificateContent" class="small-8 medium-3 column">
-		{{ certificateCategory.name }}
-		<ul *ngFor="let certificate of certificateCategory.certificates">
-			<li>{{certificate.name}}</li>
-		</ul>
-	</div>
-</div>

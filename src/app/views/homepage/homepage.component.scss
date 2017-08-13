@@ -1,22 +1,55 @@
+@import "~_media-query-settings.scss";
+
 .homepage-video-container {
 	height: 25rem;
 	display: flex;
 	justify-content: center;
-  align-items: center;
+	align-items: center;
 	overflow: hidden;
 	position: relative;
 	margin-bottom: 4rem;
+
+	@include breakpoint("small") {
+		height: 14rem;
+		margin-bottom: 2rem;
+	}
 
 	video {
 		position: absolute;
 		bottom: -75%;
 		width: 100%;
+		
+		@include breakpoint("large down") {
+			bottom: -25%;
+		}
+
+		@include breakpoint("medium down") {
+			bottom: 0%;
+		}
 	}
 
 	.welcome-sentence-container {
 		color: white;
 		z-index: 2;
 		text-align: center;
+
+		@include breakpoint("medium down") {
+			h1 {
+				font-size: 2rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
+		}
+
+		@include breakpoint("small") {
+			h1 {
+				font-size: 1.4rem;
+			}
+			h2 {
+				font-size: 1rem;
+			}
+		}
 	}
 }
 

@@ -24,7 +24,7 @@ export const TOPICS: Topic[] = [
 				ideas: ['Our course schedules are built around you!']
 			}]
 		}, 
-		imgUrl: 'assets/images/smaller-lady-working-diploma.jpg', 
+		imgUrl: '/assets/images/smaller-lady-working-diploma.jpg', 
 		id: 1
 	},{ 
 		name: 'Learn English', 
@@ -46,7 +46,7 @@ export const TOPICS: Topic[] = [
 				ideas: ['We pride ourselves in creating an interactive and fun classroom environment!']
 			}]
 		}, 
-		imgUrl: 'assets/images/smaller-learning-english-lady.jpg', 
+		imgUrl: '/assets/images/smaller-learning-english-lady.jpg', 
 		id: 2 
 	},{ 
 		name: 'Travel & Study in Canada', 
@@ -68,7 +68,7 @@ export const TOPICS: Topic[] = [
 				ideas: ['We will help you explore Toronto\'s many tourist attractions and nightlife.']
 			}]
 		}, 
-		imgUrl: 'assets/images/smaller-canadian-landmarks-cn-tower.jpg', 
+		imgUrl: '/assets/images/smaller-canadian-landmarks-cn-tower.jpg', 
 		id: 3 
 	},{ 
 		name: 'We train your employees', 
@@ -90,7 +90,7 @@ export const TOPICS: Topic[] = [
 				ideas: ['Our course schedules are built around you!']
 			}]
 		}, 
-		imgUrl: 'assets/images/smaller-man-training-other-employees.jpg', 
+		imgUrl: '/assets/images/smaller-man-training-other-employees.jpg', 
 		id: 4 
 	}
 ]

@@ -7,9 +7,9 @@ $footer-title-color: #6387d6;
 // currently white
 $footer-content-color: #fff;
 
+@import "~_media-query-settings.scss";
 
 .footer-container {
-	margin-top: 4rem;
 	padding: 2rem 0 1rem 0;
 	background-color: $footer-background-color;
 	color: $footer-content-color;
@@ -24,6 +24,10 @@ $footer-content-color: #fff;
 	.connect-info-container {
 		text-align: left;
 
+		@include breakpoint("small") {
+			text-align: center;
+		}
+
 		h5, a {
 			color: $footer-title-color;
 		}
@@ -32,5 +36,17 @@ $footer-content-color: #fff;
 	.copyright-container {
 		margin-top: .5rem;
 		text-align: center;
+	}
+
+	@include breakpoint("medium down") {
+		img {
+			height: 6rem;
+		}
+		h5 {
+			font-size: 1rem;
+		}
+		p {
+			font-size: .8rem;
+		}
 	}
 }

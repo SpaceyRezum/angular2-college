@@ -44,7 +44,6 @@ export class ChangeCareerContentComponent implements OnInit {
   ngOnInit() {
     this.diplomaContent = this._diplomaService.getDiplomas();
     this.certificateContent = this._certificateService.getCertificates();
-    console.log(this.diplomaContent);
   }
 
   switchQualifyForProgramQuestion(questionKey) {
@@ -67,6 +66,12 @@ export class ChangeCareerContentComponent implements OnInit {
   	} else {
   		this.qualifyForProgram = "no";
   	}
+  }
+
+  navigateToDiploma(diploma) {
+    if (diploma !== "") {
+      window.location.href = "/diplomas/" + diploma
+    }
   }
 
   toggleCertificates(scolarshipSelected) {

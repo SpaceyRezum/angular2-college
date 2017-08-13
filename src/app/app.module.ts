@@ -20,10 +20,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChangeCareerContentComponent } from './partial-views/change-career-content/change-career-content.component';
-import { CertificatesContentComponent } from './partial-views/change-career-content/certificates-content/certificates-content.component';
 import { TravelStudyCanadaComponent } from './partial-views/travel-study-canada/travel-study-canada.component';
 import { EnglishAsSecondLanguageComponent } from './partial-views/english-as-second-language/english-as-second-language.component';
 import { EmployeeTrainingComponent } from './partial-views/employee-training/employee-training.component';
+import { CertificateDetailPageComponent } from './views/certificate-detail-page/certificate-detail-page.component';
+import { ContactOverlayComponent } from './components/contact-overlay/contact-overlay.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +38,11 @@ import { EmployeeTrainingComponent } from './partial-views/employee-training/emp
     ContactFormComponent,
     FooterComponent,
     ChangeCareerContentComponent,
-    CertificatesContentComponent,
     TravelStudyCanadaComponent,
     EnglishAsSecondLanguageComponent,
-    EmployeeTrainingComponent
+    EmployeeTrainingComponent,
+    CertificateDetailPageComponent,
+    ContactOverlayComponent
   ],
   imports: [
     BrowserModule,
@@ -51,8 +53,11 @@ import { EmployeeTrainingComponent } from './partial-views/employee-training/emp
         path: '',
         component: HomepageComponent
       },{
-        path: 'diploma/:title',
+        path: 'diplomas/:title',
         component: DiplomaDetailPageComponent
+      },{
+        path: 'certificates/:title',
+        component: CertificateDetailPageComponent
       },{
         path: '**',
         component: PageNotFoundComponent,

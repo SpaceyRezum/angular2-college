@@ -3,10 +3,12 @@ import { Certificate } from './certificates-model';
 export const CERTIFICATES: Certificate[] = [
 	{
 		name: "Business Certificates",
+		url: "business-certificates",
 		overview: "The Business Certificates are designed for those who wish to develop their business communication skills in different sectors, and be prepared for the professional career opportunities in the Canadian business industry.",
 		certificates: [
 			{
 				name: "Audit",
+				url: "audit",
 				duration: 12,
 				certification: true,
 				description: "This program is designed for students that are involved in examining company assets and will be exposed to:",
@@ -26,12 +28,14 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{
 				name: "Business Communication Skills",
+				url: "business-communication-skills",
 				duration: 12,
 				certification: true,
 				description: "This program is designed for employees working with children, which will give them an effective communication to build relationships and encourage children’s emotional and intellectual development.",
 				courses: []
 			},{	
 				name: "Childcare Management",
+				url: "childcare-management",
 				duration: 30,
 				certification: true,
 				description: "This program is designed for individuals who want to start and operate their own child care facility or interested in childcare supervisor position. Individuals will learn:",
@@ -46,6 +50,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Collection Service",
+				url: "collection-service",
 				duration: 20,
 				certification: true,
 				description: "This program is designed for Customer Service Representative (CSR) and bookkeepers to improve their knowledge and skills to protect your business. The students will learn:",
@@ -61,6 +66,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Forensic Accounting",
+				url: "forensic-accounting",
 				duration: 12,
 				certification: true,
 				description: "This program is designed for those who are interested in condoling and examining companies` asset and will be exposed to:",
@@ -78,6 +84,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Introduction to Accounting",
+				url: "introduction-to-accounting",
 				duration: 20,
 				certification: true,
 				description: "This program is designed for individuals who would like to understand Accounting & Fundamental Tax and learn principals of accounting procedures. Students will learn:",
@@ -94,6 +101,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Introduction to Finance",
+				url: "introduction-to-finance",
 				duration: 20,
 				certification: true,
 				description: "This program is designed for bookkeepers and CSR to learn:",
@@ -107,6 +115,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Introduction to Human Resources (HR)",
+				url: "introduction-to-human-resources",
 				duration: 36,
 				certification: true,
 				description: "HR program is for students who are interested in improving their human resource skills such as:",
@@ -123,6 +132,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Key Leadership Competencies",
+				url: "key-leadership-competencies",
 				duration: 6,
 				certification: true,
 				description: "This program is designed for supervisors and managers who want to know about:",
@@ -135,6 +145,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Leadership Management Diversity",
+				url: "leadership-management-diversity",
 				duration: 20,
 				certification: true,
 				description: "This program is designed for students who want to learn about:",
@@ -145,24 +156,28 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "NAFTA",
+				url: "nafta",
 				duration: 8,
 				certification: true,
 				description: "This program is designed for students who want to learn about the free trade agreement between Canada-USA- Mexico and the last decade results and the recent trade updates.",
 				courses: []
 			},{	
 				name: "Canada Economy",
+				url: "canada-economy",
 				duration: 8,
 				certification: true,
 				description: "This program is designed for students who want to learn about economic aggregate in terms of economic progress, and politics of the last decade. Also a comparison with USA and Mexico to illustrate Canada economy.",
 				courses: []
 			},{	
 				name: "Canada Policies",
+				url: "canada-policies",
 				duration: 8,
 				certification: true,
 				description: "This program is designed for students who want to learn about North America policies system in terms of trade, work, immigration and environment.",
 				courses: []
 			},{	
 				name: "Import - Export",
+				url: "import-export",
 				duration: 6,
 				certification: true,
 				description: "This program is designed for students who want to learn about:",
@@ -174,6 +189,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Contract Negociation",
+				url: "contract-negociation",
 				duration: 4,
 				certification: true,
 				description: "This program is designed for students who want to learn about:",
@@ -184,6 +200,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Conflict Resolution and Mediation",
+				url: "conflict-resolution-and-mediation",
 				duration: 4,
 				certification: true,
 				description: "This program is designed for students who want to learn about:",
@@ -195,6 +212,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Entrepreneurship & Corporation",
+				url: "entrepreneurship-and-corporation",
 				duration: 4,
 				certification: true,
 				description: "This program is designed for students who want to learn about:",
@@ -209,10 +227,12 @@ export const CERTIFICATES: Certificate[] = [
 		]
 	},{
 		name: "Social Services Certificates",
+		url: "social-services-certificates",
 		overview: "The Social Services’ Certificates are designed for those who wish to develop knowledge and acquire social skills in the community and make a meaningful contribution in the human service field.",
 		certificates: [
 			{	
 				name: "Employment Advisor Placement Specialist",
+				url: "Employment Advisor Placement Specialist",
 				duration: 18,
 				certification: true,
 				description: "This program is designed for students that want to learn about:",
@@ -231,6 +251,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Introduction to Community Services",
+				url: "introduction-to-community-services",
 				duration: 20,
 				certification: true,
 				description: "The Community Service certificate program is designed for individuals seeking the knowledge and skills to enter the field of social services, psychology, and resolving their personal and social problems. Students will also learn about:",
@@ -242,6 +263,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Job Search and Placement",
+				url: "job-search-and-placement",
 				duration: 24,
 				certification: true,
 				description: "The program is designed for those who are looking for jobs in the market sector. Students will learn:",
@@ -255,16 +277,19 @@ export const CERTIFICATES: Certificate[] = [
 		]
 	},{
 		name: "Health and Safety Certificates",
+		url: "health-and-safety-certificates",
 		overview: "The Health & Safety Certificates are designed for those who wish to develop knowledge and acquire skills in the Health & Safety profession.",
 		certificates: [
 			{	
 				name: "Advance Cardiac Life Support (ACLS)",
+				url: "advance-cardiac-life-support",
 				duration: 16,
 				certification: true,
 				description: "The program is designed for those who wish to improve the quality of care provided to seriously ill or injured adults, resulting in improved outcomes. Students will enhance their skills in treating adult victims of cardiac arrest or other cardiopulmonary emergencies.",
 				courses: []
 			},{	
 				name: "Pediatric Advanced Life Support (PALS)",
+				url: "pediatric-advanced-life-support",
 				duration: 16,
 				certification: true,
 				description: "The course has been designed for individuals who wish to improve the quality of care provided to seriously ill or injured children, resulting in improved outcomes. Students will use a series of simulated pediatric emergencies to reinforce the important concepts of a systematic approach to pediatric assessment, basic life support.",
@@ -272,6 +297,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Autism",
+				url: "autism",
 				duration: 6,
 				certification: true,
 				description: "The certificate is designed to prepare individuals to work with children and students across the autism spectrum. Whether you are a special educator, a teacher, a concerned family member or an advocate, this autism certification gives you critical knowledge and practical skills to help you address the disorder. Students will learn about:",
@@ -285,6 +311,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Behavior And Disorder Behavior",
+				url: "behavior-and-disorder-behavior",
 				duration: 12,
 				certification: true,
 				description: "The program is designed for students who are interested in learning about different kinds of disabilities, syndrome, and delays in all areas of development such as physically, mentally, socially, and emotionally. Students will be exposed to:",
@@ -297,6 +324,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Child Development And Needs",
+				url: "child-development-and-needs",
 				duration: 4,
 				certification: true,
 				description: "The program is designed for students who are interested in learning about children`s body and brain development. From birth to adulthood. Students will be exposed to:",
@@ -307,6 +335,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Communication Skills",
+				url: "communication-skills",
 				duration: 30,
 				certification: true,
 				description: "The program is designed for people working with children. The course will help individuals to communicate effectively with children as well as building relationships with them. Students will learn about:",
@@ -320,6 +349,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Evaluating & Qualifying Pharmacy License Preparation",
+				url: "evaluating-and-qualifying-pharmacy-license-preparation",
 				duration: 200,
 				certification: true,
 				description: "This program is designed for pharmacists to get their Pharmacy degree recognized by the Pharmacy Examining Board of Canada (PEBC). The program will prepare Pharmacists for the Qualifying and Evaluating Exam for College of pharmacy graduates from Canadian and Non-Canadian universities.",
@@ -327,6 +357,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "CPR and First-Aid Training",
+				url: "cpr-and-first-aid-training",
 				duration: 16,
 				certification: true,
 				description: "(In collaboration with Lifesaving Society Organization in Canada). Students will learn four levels of CPR training – A, B, C and HCP – that are designed to meet the needs of both the public and professional rescuers like lifeguards. Students will also learn about:",
@@ -337,6 +368,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Health & Safety (OSH)",
+				url: "health-and-safety",
 				duration: 5,
 				certification: true,
 				description: "This program is designed for individuals who wish to gain knowledge of health and safety or the OSH Act. Students will learn about:",
@@ -351,6 +383,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Introduction To Pedagogy",
+				url: "introduction-to-pedagogy",
 				duration: 22,
 				certification: true,
 				description: "The program is designed for students who are interested in learning about principles of theories of psychology of personalities, and experimental methods of teaching psychology. Students will learn:",
@@ -363,6 +396,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Introduction To Psychology",
+				url: "introduction-to-psychology",
 				duration: 20,
 				certification: true,
 				description: "The program is designed for students who are interested in learning about the study of the mind, along with other aspects such as viewing mind as a perception, cognition, emotions, and behavior. Students will also learn about understanding behaviors, brain perception, emotions, and cognition.",
@@ -370,6 +404,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Palliative Care For Families",
+				url: "palliative-care-for-families",
 				duration: 4,
 				certification: true,
 				description: "The program is designed for families, relatives, and friends of the patient, in order to help the patient with the challenges and trauma. The course will cover:",
@@ -381,12 +416,14 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Palliative Care",
+				url: "palliative-care",
 				duration: 4,
 				certification: true,
 				description: "Students will learn how to improve the quality of life for those who are living with and/or dying from a progressive life-limiting illness. Learn to assist patients and their families address physical, psychosocial, social, spiritual and practical issues.",
 				courses: []
 			},{	
 				name: "Stress Relief Management",
+				url: "stress-relief-management",
 				duration: 4,
 				certification: true,
 				description: "The program is designed for those who are interested in learning how to reduce, prevent, and manage with stress in workplace and with those are in difficult situations. The course will cover:",
@@ -396,6 +433,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Work Hazardous Material Information System (WHMIS)",
+				url: "work-hazardous-material-information-system",
 				duration: 4,
 				certification: true,
 				description: "The course has been designed to meet and exceed the Federal Hazardous Products Act and follow Controlled Product Regulations for any employees working with controlled products, so by completing this course you can become compliant with Federal Regulations and improve your knowledge of an important system in workplace safety.",
@@ -403,6 +441,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Brain Memory Exercises",
+				url: "brain-memory-exercises",
 				duration: 4,
 				certification: true,
 				description: "This program is designed for students who want to learn about brain memory exercises and its development. Students will learn about:",
@@ -413,6 +452,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "Senior Behavior Disorder",
+				url: "senior-behavior-disorder",
 				duration: 4,
 				certification: true,
 				description: "This program is designed for students who want to learn about Aging and senility, senior personalities, chronic diseases linked to the seniors mostly, and understand senior behavior.",
@@ -422,10 +462,12 @@ export const CERTIFICATES: Certificate[] = [
 		]
 	},{
 		name: "Language Certificates",
+		url: "language-certificates",
 		overview: "The Language Certificates are designed for those who wish develop their language communication skills in English, French, and Arabic.",
 		certificates: [
 			{	
 				name: "English at Work",
+				url: "english-at-work",
 				duration: 100,
 				certification: true,
 				description: "This course is designed for employees or students who wish to develop their English communication skills at their workplace. Students will learn:",
@@ -440,6 +482,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "English As A Second Language (ESL)",
+				url: "english-as-a-second-language",
 				duration: 100,
 				certification: true,
 				description: "Students will go through different levels of ESL (Beginner, Intermediate, and Advanced)",
@@ -447,6 +490,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "French at Work",
+				url: "french-at-work",
 				duration: 100,
 				certification: true,
 				description: "This course is designed for employees or students who wish to develop their French communication skills at their workplace. French at work is based on the communicative approach. Through the use of themes, this course focuses on listening, speaking, reading, and writing skills.",
@@ -454,6 +498,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "IELTS",
+				url: "ielts",
 				duration: 100,
 				certification: true,
 				description: "The program is designed to assess the language ability of individuals who need to study or work where English is the language of communication. By the completion of this course, students will be exposed to intensive exam IELTS preparation using computer or/and hard copy examination. Students will practice four different sections of the IELTS exam:",
@@ -465,6 +510,7 @@ export const CERTIFICATES: Certificate[] = [
 				]
 			},{	
 				name: "TOEFL",
+				url: "toefl",
 				duration: 36,
 				certification: true,
 				description: "This program is designed for students who would like to be prepared for the TOEFL exam and achieve the desired score. Students will be exposed to intensive exam TOEFEL preparation using computer or hard copy examination. Students will learn:",

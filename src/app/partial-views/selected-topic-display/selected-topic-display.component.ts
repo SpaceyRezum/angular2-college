@@ -19,45 +19,20 @@ import { Topic } from '../../data/topics/topics-model';
         })),
         transition('unselected => selected', animate('0.3s ease-in-out')),
         transition('selected => unselected', animate('0.3s ease-in-out'))
-    ]),
-    trigger('animateContactFormOverlay', [
-        state('false', style({
-          opacity: 0, transform: 'scale(0.0)'
-        })),
-        state('true', style({
-          opacity: 1, transform: 'scale(1.0)'
-        })),
-        transition('0 => 1', animate('0.3s ease-in-out')),
-        transition('1 => 0', animate('0.3s ease-in-out'))
     ])
   ]
 })
 export class SelectedTopicDisplayComponent {
-  constructor(private router: Router) { }
-  contactFormOverlayDisplayed: boolean = false; 
+  constructor(private router: Router) { } 
   @Input() selectedTopicState: string;
   @Input() selectedTopic: Topic;
   @Output() onResetSelectedTopic = new EventEmitter;
-  
-  @HostListener('document:keydown', ['$event'])
-  disableContactFormOverlayOnEscape(event: KeyboardEvent) {
-    if (this.contactFormOverlayDisplayed) {
-      let x = event.keyCode;
-      if (x === 27) {
-        this.contactFormOverlayDisplayed = false;
-      }  
-    }
-  }
 
   ngOnChanges() {
     if (this.selectedTopic) {
       this.selectedTopicState = 'unselected';
       setTimeout(() => this.animateSelectedTopic(), 100);
     }
-  }
-
-  toggleContactFormOverlay() {
-    this.contactFormOverlayDisplayed = !this.contactFormOverlayDisplayed;
   }
 
   navigateToTopic(topicRoute) {

@@ -1,37 +1,57 @@
+@import "~_media-query-settings.scss";
+
 $header-height: 5rem;
 $header-blue: #385caf;
 
 .header-container {
 	height: $header-height;
+	font-family: TisaOT-Bold;
+	color: $header-blue;
+	font-weight: 900;
 
-	a {
+	.logo-container {
 		cursor: pointer;
 		height: $header-height;
 		display: flex;
-		justify-content: center;
 		align-items: center;
-		text-align: center;
-		font-family: TisaOT-Bold;
-		color: $header-blue;
-		font-weight: 900;
 
-		.logo-container {
-			height: $header-height;
+		img {
+			height: ($header-height - 1);
+		}
+
+		@include breakpoint("medium down") {
+			padding-left: 1rem;
+		}
+	}
+
+	p {
+		margin: 0 0 0 2rem;
+
+		@include breakpoint("small") {
+			font-size: .8rem;
+			margin: 0 0 0 1rem;
+		}
+	}
+	
+
+	.about-us-link {
+		height: $header-height;
+		cursor: pointer;
+		padding-right: 0;
+		a {
+			height: 100%;
+			font-size: 1.4rem;
+			transition: background-color 1s ease;
+			text-align: center;
+			padding: 1rem;
+			width: 8rem;
 			display: flex;
 			align-items: center;
 
-			img {
-				height: ($header-height - 1);
+			@include breakpoint(small) {
+				font-size: 1rem;
+				justify-content: center;
 			}
-		}
-
-		p {
-			margin: 0 0 0 2rem;
-		}
-
-		&.about-us-link {
-			font-size: 1.4rem;
-			transition: background-color 1s ease;
 
 			&:hover {
 				color: white;

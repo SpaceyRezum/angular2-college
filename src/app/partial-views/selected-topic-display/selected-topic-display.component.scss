@@ -1,3 +1,5 @@
+@import "~_media-query-settings.scss";
+
 #selected-topic-container {
 	text-align: center;
 
@@ -10,6 +12,10 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
+	@include breakpoint("medium down") {
+		flex-direction: column;
+	}
 	
 	.detail-image-container {
 		img {
@@ -17,58 +23,57 @@
 			max-height: 20rem;
 			overflow: hidden;
 		}
+
+		@include breakpoint("medium only") {
+			margin-bottom: 1rem;
+		}
 	}
 
 	.detail-content-container {
 		overflow: hidden;
 		padding: 0 1rem;
-	
+
 		.advantage-container {
 			width: auto;
 			display: flex;
 			align-items: flex-start;
 			margin: 1rem 1rem 0;
 			max-height: 150px;
-			
-			img {
+
+			@include breakpoint("large down") {
+				max-height: 200px;
+			}
+
+			.advantage-icon {
 				height: 4rem;
 			}
 
 			.advantage-content {
 				text-align: justify;
 				padding: 0 1rem;
+
+				@include breakpoint("large up") {
+					p {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			@include breakpoint("large down") {
+				.advantage-icon {
+					height: 3rem;
+				}
+
+				.advantage-content {
+					h3 {
+						font-size: 1.5rem;
+					}
+
+					p {
+						font-size: .9rem;
+					}
+				}
 			}
 		}
-	}
-}
-
-.action-buttons-container {
-	margin-top: 5rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	div {
-		margin: 2% 0;
-		display: flex;
-		justify-content: space-around;	
-	}
-}
-
-.overlay-window {
-  background-color: rgba(10, 10, 10, 0.7);
-  z-index: 3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  app-contact-form {
-		background: white;
-		height: 50vh;
-		position: relative;
 	}
 }

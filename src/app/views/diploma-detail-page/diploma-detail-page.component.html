@@ -1,4 +1,38 @@
-<h2>{{specificDiploma.title}}</h2>
-<div [innerHTML]="specificDiploma.courseDescription"></div>
-<!-- TO DO: Set the page with diploma content + contact button!! -->
+<div class="row">
+	<div class="title-image-container row">
+		<img src={{specificDiploma.imgUrl}} alt={{specificDiploma.title}}>
+		<h2>{{specificDiploma.title}}</h2>
+	</div>
 
+	<div class="diploma-section-content-container small-12 column">
+		<div class="column">
+			<h3 >Description</h3>
+			<div class="description" [innerHTML]="specificDiploma.courseDescription"></div>
+		</div>
+		<div class="column">
+			<h3>Requirements</h3>
+			<div>
+				<ul>
+					<li *ngFor="let requirement of specificDiploma.requirements">{{requirement}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="column">
+			<h3>Other Information</h3>
+			<div><strong>Income Expectactions:</strong> {{specificDiploma.incomeExpectations[0]}} - {{specificDiploma.incomeExpectations[1]}}</div>
+			<div><strong>Length of course:</strong> {{specificDiploma.length}} months</div>
+		</div>
+		
+		<div class="button-group column">
+			<app-contact-overlay [interestToPass]="specificDiploma.title"></app-contact-overlay>
+		</div>
+
+		<div class="other-diploma-navigator small-8 float-center">
+			<label>Navigate to other diplomas available</label>
+			<select (change)="navigateToDiploma($event.target.value)">
+				<option></option>
+				<option *ngFor="let diploma of otherDiplomas" value="{{diploma.url}}">{{diploma.title}}</option>
+			</select>
+		</div>
+	</div>
+</div>

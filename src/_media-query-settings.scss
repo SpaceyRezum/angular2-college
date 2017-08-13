@@ -1,0 +1,40 @@
+$breakpoint-small: 640px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1440px;
+$breakpoint-xlarge: 1880px;
+
+@mixin breakpoint($variable) {
+	@if $variable == "small" { 
+		@media (max-width: #{$breakpoint-small}) {
+			@content;
+		}
+	} @else if $variable == "medium down" {
+		@media (max-width: $breakpoint-medium) {
+			@content;
+		}
+	} @else if $variable == "medium only" {
+		@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+			@content;
+		}
+	} @else if $variable == "medium up" {
+		@media (min-width: $breakpoint-small) {
+			@content;
+		}
+	} @else if $variable == "large down" {
+		@media (max-width: $breakpoint-large) {
+			@content;
+		}
+	} @else if $variable == "large only" {
+		@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+			@content;
+		}
+	} @else if $variable == "large up" {
+		@media (min-width: $breakpoint-medium) {
+			@content;
+		}
+	} @else if $variable == "xlarge only" {
+		@media (min-width: $breakpoint-large) {
+			@content;
+		}
+	}
+}

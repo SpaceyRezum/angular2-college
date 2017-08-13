@@ -1,10 +1,25 @@
 <div class="contact-form-container small-8 small-centered">
-  <p>Check out this contact form yo!</p>
-	<form>
-		<button class="close-button" aria-label="Close modal" type="button" (click)="closeOverlay()">
-			<span aria-hidden="true">&times;</span>
-		</button>
-  	<label>Simple input field</label>
-  	<input type="text">
+  <p>For us to contact you, we would need you to fill out this form!</p>
+	<form (ngSubmit)="sendEmail(inputData)" #contactForm="ngForm" class="row">
+		<div class="contact-form-input-group" hidden>
+  		<input type="text" name="interest" [(ngModel)]="inputData.interest">
+  	</div>
+		<div class="contact-form-input-group small-6 column">
+  		<label>First Name</label>
+  		<input type="text" name="firstName" [(ngModel)]="inputData.firstName" required>
+  	</div>
+		<div class="contact-form-input-group small-6 column">
+  		<label>Last Name</label>
+  		<input type="text" name="lastName" [(ngModel)]="inputData.lastName" required>
+  	</div>
+		<div class="contact-form-input-group small-12 column">
+  		<label>Email</label>
+  		<input type="email" name="email" [(ngModel)]="inputData.email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+  	</div>
+		<div class="contact-form-input-group small-12 column">
+  		<label>Message</label>
+  		<textarea type="text" name="message" [(ngModel)]="inputData.message" required></textarea>
+  	</div>
+  	<button class="button" type="submit" placeholder="Your message here...">Send</button>
   </form>
 </div>

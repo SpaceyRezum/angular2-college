@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./english-as-second-language.component.scss']
 })
 export class EnglishAsSecondLanguageComponent implements OnInit {
-
   constructor() { }
-
+  programSelected: string;
+  
   ngOnInit() {
+  	this.programSelected = "";
   }
 
+  selectProgram(selectedProgram){
+  	this.programSelected = selectedProgram;
+  }
 }

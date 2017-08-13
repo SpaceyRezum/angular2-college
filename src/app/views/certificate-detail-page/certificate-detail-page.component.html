@@ -1,0 +1,21 @@
+<p>
+  Name: {{specificCertificate.name}}
+</p>
+<p>
+  Url: {{specificCertificate.url}}
+</p>
+<p>
+  Duration: {{specificCertificate.duration}}
+</p>
+<p>
+  Certifcation: {{specificCertificate.certifcation}}
+</p>
+<p>
+  Description: {{specificCertificate.description}}
+</p>
+<ul>
+	Courses:
+	<li *ngFor="let course of specificCertificate.courses">{{course}}</li>
+</ul>
+<app-contact-overlay [interestToPass]="specificCertificate.name"></app-contact-overlay>
+

@@ -1,0 +1,34 @@
+@import "~_media-query-settings.scss";
+
+.selected-topic-content-container {
+	.second-career-intro-container {
+		font-size: 1.5rem;
+	}
+
+	.second-career-input-container {
+		fieldset {
+			legend {
+				text-align: center;
+				font-size: 1.3rem;
+				text-decoration: underline;
+				margin-bottom: 1rem;
+			}
+
+			.second-career-checkbox {
+				p {
+					font-weight: 900;
+				}
+			}
+
+			.button {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	.second-career-explanation {
+		text-align: left;
+		font-size: .8rem;
+		margin-bottom: 2rem;
+	}	
+}

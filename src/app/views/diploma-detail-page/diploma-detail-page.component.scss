@@ -1,0 +1,79 @@
+@import "~_media-query-settings.scss";
+
+.title-image-container {
+	position: relative;
+	overflow: hidden;
+	height: 25rem;
+	margin-bottom: 2rem;
+	
+	h2 {
+		position: absolute;
+		font-size: 2rem;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		width: 100%;
+		margin: 0;
+		padding: 1rem 0;
+		background-color: rgba(255, 255, 255, 0.60);
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	@include breakpoint("medium down") {
+		height: 18rem;
+
+		h2 {
+			font-size: 1.5rem;
+			padding: .8rem .5rem;
+		}
+	}
+
+	@include breakpoint("small") {
+		height: 12rem;
+
+		h2 {
+			padding: .5rem;	
+		}
+	}
+}
+
+.diploma-section-content-container {
+	.column {
+		h3 {
+			width: 100%;
+			font-size: 1.7rem;
+			border-bottom: 1px solid gray;
+		}
+		&:nth-of-type(n+2) {
+			margin-top: 1rem; 
+		}
+	}
+	
+	.description {
+		@include breakpoint("small") {
+			text-align: justify;
+		}
+	}
+
+	.other-diploma-navigator {
+		margin-top: 2rem;
+		label {
+			font-size: 1.4rem;
+			@include breakpoint("small") {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	@include breakpoint("medium down") {
+		h3 {
+			font-size: 1.3rem;
+		}
+	}
+
+	
+}

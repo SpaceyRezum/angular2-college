@@ -1,17 +1,17 @@
-<div class="homepage-video-container row expanded">
+<div class="homepage-video-container row column">
 	<video autoplay loop poster="assets/images/header-video-fallback.png">
 	    <source src="assets/video/nab.mp4"  type="video/mp4" />
 	    	<img src="assets/images/header-video-fallback.png" title="Toronto skyline with sunny landscape" /> 
 	</video>
-	<div class="welcome-sentence-container row">
+	<div class="welcome-sentence-container row column">
 		<h1>Welcome to North American Business College</h1>
 		<h2>What are your plans for the short term future?</h2>
 	</div>
 </div>
 
-<div class="topic-box-container expanded row">
+<div class="topic-box-container row column">
 	<div class="small-12 medium-6 large-3 columns" *ngFor="let topic of topics">
-		<app-topic-box 
+		<app-topic-box
 			[ngClass]="checkIfSelectedTopic(topic) ? 'topic-with-color' : 'topic-unselected'"
 			[topic]="topic"
 			[selectedTopic]="selectedTopic"

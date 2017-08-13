@@ -1,3 +1,22 @@
-<p>
-  employee-training works!
-</p>
+<div>
+	<p>NAB Business College, provide the opportunity for business to enrich their employees by providing enhanced training.</p>
+	<p>This training is also subsidized by the Government of Ontario, which means that up to 90% of the cost will be covered by the Government.</p>
+	<p>These programs are ideal for Businesses of any size.</p>
+	<p>Employers can focus on their business, while we train your staff.</p>
+	<label for="employee-training-dropdown">The following are all programs that are available for Businesses like yours:</label>
+	<select [ngModel]="selectedIntensivePackage" (ngModelChange)="selectPackage($event)" id="employee-training-dropdown">
+		<option [value]=""></option>
+		<option *ngFor="let package of intensivePackages" [value]="package.name">{{package.name}}</option>
+	</select>
+	<div *ngIf="selectedIntensivePackage">
+		Name: {{selectedIntensivePackage.name}}
+		targetAudience: {{selectedIntensivePackage.targetAudience}}
+		<ul>
+			certificates included: 
+			<li *ngFor="let certificate of selectedIntensivePackage.certificatesIncluded">Certificate: {{certificate.name}}, length: {{certificate.length}}</li>
+		</ul>
+		Certified? {{selectedIntensivePackage.certificate ? "yes" : "no"}}
+
+		<app-contact-overlay [interestToPass]="package.name"></app-contact-overlay>
+	</div>
+</div>

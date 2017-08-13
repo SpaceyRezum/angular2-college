@@ -37,7 +37,6 @@ export class HomepageComponent implements OnInit {
 
   resetSelectedTopic() {
     this.selectedTopic = null;
-    console.log('Topic unselected');
   }
 
   scrollToSelectedTopicContainer() {

@@ -6,11 +6,11 @@
 	</div>
 
 	<div class="row columns detail-container"> 
-		<div class="detail-image-container hide-for-small medium-5 column">
+		<div class="detail-image-container hide-for-small medium-12 large-5 column">
 			<img src={{selectedTopic.imgUrl}} />
 		</div>
 		
-		<div class="detail-content-container small-12 medium-7 column">
+		<div class="detail-content-container small-12 medium-10 large-7 column">
 			<div class="advantage-container" *ngFor="let advantage of selectedTopic.content.advantages">
 				<img class="advantage-icon" src={{advantage.icon}}/>
 				<div class="advantage-content">
@@ -31,23 +31,9 @@
 		<app-employee-training *ngSwitchCase="'employee-training'"></app-employee-training>
 	</div>
 
-	<div class="action-buttons-container row columns">
-		<h4>Want to know more about our program?</h4>
-		<div class="small-6">
-			<button class="button success" (click)="toggleContactFormOverlay()">
-				Let us contact you!
-			</button>
-
-			<button class="hollow button warning"
-				(click)="resetSelectedTopic()">
-				Go back to top
-			</button>
-		</div>
-	</div>
-	
-	<div class="overlay-window"
-		[@animateContactFormOverlay]="contactFormOverlayDisplayed">
-		<app-contact-form class="row colum small-6" (onOverlayCloseButtonClick)="toggleContactFormOverlay($event)"></app-contact-form>
-	</div>
+	<button class="reset-button hollow button warning"
+		(click)="resetSelectedTopic()">
+		Go back to top
+	</button>
 
 </div>
