@@ -4,6 +4,7 @@ export const CERTIFICATES: Certificate[] = [
 	{
 		name: "Business Certificates",
 		url: "business-certificates",
+		imgUrl: "/assets/images/certificates/business-certificates.jpg",
 		overview: "The Business Certificates are designed for those who wish to develop their business communication skills in different sectors, and be prepared for the professional career opportunities in the Canadian business industry.",
 		certificates: [
 			{
@@ -228,6 +229,7 @@ export const CERTIFICATES: Certificate[] = [
 	},{
 		name: "Social Services Certificates",
 		url: "social-services-certificates",
+		imgUrl: "/assets/images/certificates/social-services-certificates.jpg",
 		overview: "The Social Services’ Certificates are designed for those who wish to develop knowledge and acquire social skills in the community and make a meaningful contribution in the human service field.",
 		certificates: [
 			{	
@@ -278,6 +280,7 @@ export const CERTIFICATES: Certificate[] = [
 	},{
 		name: "Health and Safety Certificates",
 		url: "health-and-safety-certificates",
+		imgUrl: "/assets/images/certificates/health-and-safety-certificates.jpg",
 		overview: "The Health & Safety Certificates are designed for those who wish to develop knowledge and acquire skills in the Health & Safety profession.",
 		certificates: [
 			{	
@@ -463,6 +466,7 @@ export const CERTIFICATES: Certificate[] = [
 	},{
 		name: "Language Certificates",
 		url: "language-certificates",
+		imgUrl: "/assets/images/certificates/language-certificates.jpg",
 		overview: "The Language Certificates are designed for those who wish develop their language communication skills in English, French, and Arabic.",
 		certificates: [
 			{	

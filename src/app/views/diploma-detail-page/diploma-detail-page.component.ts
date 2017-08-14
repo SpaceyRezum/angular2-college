@@ -13,7 +13,7 @@ export class DiplomaDetailPageComponent implements OnInit {
 	specificDiploma: Diploma;
 	otherDiplomas: Array<Diploma>;
 
-  constructor(private route: ActivatedRoute, private _diplomaService: DiplomaService) { }
+  constructor(private route: ActivatedRoute, private _diplomaService: DiplomaService, private _router: Router) { }
 
   ngOnInit() {
   	this.specificDiploma = this._diplomaService.getSpecificDiploma(this.route.snapshot.params['title']);
@@ -23,7 +23,7 @@ export class DiplomaDetailPageComponent implements OnInit {
 
   navigateToDiploma(diploma) {
     if (diploma !== "") {
-      window.location.href = "/diplomas/" + diploma
+      this._router.navigate(['/diplomas/', diploma]);
     }
   }
 

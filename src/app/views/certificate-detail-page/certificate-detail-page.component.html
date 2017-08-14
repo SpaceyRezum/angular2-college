@@ -1,21 +1,34 @@
-<p>
-  Name: {{specificCertificate.name}}
-</p>
-<p>
-  Url: {{specificCertificate.url}}
-</p>
-<p>
-  Duration: {{specificCertificate.duration}}
-</p>
-<p>
-  Certifcation: {{specificCertificate.certifcation}}
-</p>
-<p>
-  Description: {{specificCertificate.description}}
-</p>
-<ul>
-	Courses:
-	<li *ngFor="let course of specificCertificate.courses">{{course}}</li>
-</ul>
-<app-contact-overlay [interestToPass]="specificCertificate.name"></app-contact-overlay>
+<div class="row column certificate-detail-page-container">
+	<div class="row certificate-detail-page-image-container">
+		<img src="{{specificCertificate.imgUrl}}" alt="Image of {{specificCertificate.name}}"/>
+		<h2>{{specificCertificate.category}}</h2>
+	</div>
+	<div class="small-12 certificate-detail-page-content-container column">
+		<h2>
+			{{specificCertificate.name}}
+		</h2>
+		<p>
+			<span class="smaller-title">Description:</span>{{specificCertificate.description}}
+		</p>
+		<div *ngIf="specificCertificate.courses.length > 0">
+			<span class="smaller-title">Courses:</span>
+			<ul>
+				<li *ngFor="let course of specificCertificate.courses">{{course}}</li>
+			</ul>
+		</div>
+		<div class="row icon-label-group-container">
+			<div class="small-6 column icon-label-group">
+				<img src="/assets/images/svg/clock.svg" />
+				<span>Duration:</span>
+				<span>{{specificCertificate.duration}} Hours</span>
+			</div>
+			<div class="small-6 column icon-label-group">
+				<img src="/assets/images/svg/diploma.svg" />
+				<span>Certifcation:</span>
+				<span>{{specificCertificate.certification ? "Yes" : "No"}}</span>
+			</div>
+		</div>
+	</div>
+	<app-contact-overlay [interestToPass]="specificCertificate.name"></app-contact-overlay>
+</div>
 

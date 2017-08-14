@@ -1,6 +1,7 @@
 export class Certificate {
 	name: string;
 	url: string;
+	imgUrl: string;
 	overview: string;
 	certificates: Array<{
 		name: string,

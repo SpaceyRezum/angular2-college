@@ -1,0 +1,97 @@
+@import "~_media-query-settings.scss";
+
+.certificate-detail-page-container {
+	.certificate-detail-page-image-container {
+		position: relative;
+		overflow: hidden;
+		height: 23rem;
+		margin-bottom: 2rem;
+
+		h2 {
+			position: absolute;
+			font-size: 2rem;
+			bottom: 0;
+			left: 0;
+			text-align: center;
+			width: 100%;
+			margin: 0;
+			padding: 1rem 0;
+			background-color: rgba(255, 255, 255, 0.60);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		@include breakpoint("medium down") {
+			height: 16rem;
+
+			h2 {
+				font-size: 1.5rem;
+				padding: .8rem .5rem;
+			}
+		}
+
+		@include breakpoint("small") {
+			height: 10rem;
+
+			h2 {
+				padding: .5rem;	
+			}
+		}
+	}
+
+	.certificate-detail-page-content-container {
+		h2 {
+			font-size: 2rem;
+		}
+
+		ul {
+			margin-left: 2.25rem;
+		}
+
+		.smaller-title {
+			color: darkred;
+			font-weight: 900;
+			padding-right: .5rem;
+			font-size: 1.2rem;
+		}
+
+		.icon-label-group-container {
+			border: 1px gray solid;
+			border-right: none;
+			border-left: none;
+			padding: 1rem 0;
+			margin-bottom: 2rem;
+			.icon-label-group {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+
+				img, span {
+					height: 3rem;
+					margin-right: 1rem;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+				}
+
+				@include breakpoint("small") {
+					img, span {
+						height: 2rem;
+						font-size: .8rem;
+						margin-right: 0.5rem;
+					}
+				}
+			}
+		}
+
+		@include breakpoint("small") {
+			p, li {
+				text-align: justify;
+			}
+		}
+	}
+}

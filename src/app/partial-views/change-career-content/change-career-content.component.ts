@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Certificate } from '../../data/certificates/certificates-model';
 import { CertificateService } from '../../services/certificate.service';
 import { Diploma } from '../../data/diplomas/diplomas-model';
@@ -12,7 +13,7 @@ import { DiplomaService } from '../../services/diploma.service';
   providers: [ CertificateService, DiplomaService ]
 })
 export class ChangeCareerContentComponent implements OnInit {
-  constructor(private _certificateService: CertificateService, private _diplomaService: DiplomaService) { }
+  constructor(private _certificateService: CertificateService, private _diplomaService: DiplomaService, private _router: Router) { }
   @Input() selectedTopic: any;
   questionToQualify: any = {
   	"question1" : false,
@@ -70,7 +71,13 @@ export class ChangeCareerContentComponent implements OnInit {
 
   navigateToDiploma(diploma) {
     if (diploma !== "") {
-      window.location.href = "/diplomas/" + diploma
+      this._router.navigate(['/diplomas/', diploma]);
+    }
+  }
+
+  navigateToCertificate(certificate) {
+    if (certificate !== "") {
+      this._router.navigate(['/certificates/', certificate])
     }
   }
 

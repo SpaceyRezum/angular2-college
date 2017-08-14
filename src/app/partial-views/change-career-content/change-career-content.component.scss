@@ -30,5 +30,15 @@
 		text-align: left;
 		font-size: .8rem;
 		margin-bottom: 2rem;
-	}	
+	}
+
+	.second-career-result-container {
+		.certificate-list {
+			margin-bottom: 2rem;
+
+			@include breakpoint("small") {
+				margin-bottom: 1rem;
+			}
+		}
+	}
 }

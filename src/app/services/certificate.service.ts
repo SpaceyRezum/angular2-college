@@ -12,12 +12,16 @@ export class CertificateService {
 		let specificCertificate;
 
 		CERTIFICATES.forEach(function(certificateCategory) {
+			let imgUrl = certificateCategory.imgUrl;
+			let categoryName = certificateCategory.name;
 			let result = certificateCategory.certificates.find(function(certificate){
 				return (certificate.url === certificateUrl);
 			});
 			
 			if (result) {
 				specificCertificate = result;
+				specificCertificate.imgUrl = imgUrl;
+				specificCertificate.category = categoryName;
 				return;
 			}
 		});

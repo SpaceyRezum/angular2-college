@@ -73,18 +73,24 @@
     <div *ngIf="(qualifyForProgram === 'no')">
       <p>Unfortunately, it looks like you do not qualify for the “Second Career Program”!</p>
       <p><strong>But you might still be eligible for a scolarship up to 80%.</strong></p>
-      <label for="scolarship-list">Select one that applies to you the most</label>
-      <select [ngModel]="scolarshipSelected" (ngModelChange)="toggleCertificates($event)" id="scolarship-list">
+      <p for="scolarship-list">Select one scolarship that could apply to you the most</p>
+      <select class="small-12 medium-8 float-center" [ngModel]="scolarshipSelected" (ngModelChange)="toggleCertificates($event)" id="scolarship-list">
         <option [value]=""></option>
         <option *ngFor="let scolarship of listOfScolarships" [value]="scolarship">{{scolarship}}</option>
       </select>
       <div *ngIf="showCertificates">
-        <ul class="certificate-list" *ngFor="let certificateCategory of certificateContent">
-          {{certificateCategory.name}}
-          <li *ngFor="let certificate of certificateCategory.certificates">
-            <a routerLink="/certificates/{{certificate.url}}">{{certificate.name}}</a>
-          </li>
-        </ul>
+        <p>Here's a list of certificates you might be able to get a scolarship for:</p>
+        <div class="row small-up-1 medium-up-2 large-up-4">
+          <div class="certificate-list column" *ngFor="let certificateCategory of certificateContent">
+            <label>{{certificateCategory.name}}</label>
+            <select (change)="navigateToCertificate($event.target.value)">
+              <option></option>
+              <option *ngFor="let certificate of certificateCategory.certificates" value="{{certificate.url}}">
+                {{certificate.name}}
+              </option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   </div>

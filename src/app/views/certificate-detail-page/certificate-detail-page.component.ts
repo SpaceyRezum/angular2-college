@@ -17,5 +17,6 @@ export class CertificateDetailPageComponent implements OnInit {
 
 	ngOnInit() {
 		this.specificCertificate = this._certificateService.getSpecificCertificate(this.route.snapshot.params['title']);
+  	console.log(this.specificCertificate);
   }
 }
