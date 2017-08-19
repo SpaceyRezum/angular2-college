@@ -1,0 +1,17 @@
+@import "~_media-query-settings.scss";
+
+div {
+	text-align: left;
+	
+	@include breakpoint("small down") {
+		text-align: justify;
+	}
+
+	ul {
+		margin-left: 0;
+
+		li {
+			margin-left: 2rem;
+		}
+	}
+}

@@ -24,7 +24,7 @@ $footer-content-color: #fff;
 	.connect-info-container {
 		text-align: left;
 
-		@include breakpoint("small") {
+		@include breakpoint("small down") {
 			text-align: center;
 		}
 

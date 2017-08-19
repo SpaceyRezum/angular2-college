@@ -27,7 +27,7 @@ $header-blue: #385caf;
 	p {
 		margin: 0 0 0 2rem;
 
-		@include breakpoint("small") {
+		@include breakpoint("small down") {
 			font-size: .8rem;
 			margin: 0 0 0 1rem;
 		}

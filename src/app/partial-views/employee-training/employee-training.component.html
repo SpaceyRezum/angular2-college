@@ -1,22 +1,36 @@
-<div>
-	<p>NAB Business College, provide the opportunity for business to enrich their employees by providing enhanced training.</p>
-	<p>This training is also subsidized by the Government of Ontario, which means that up to 90% of the cost will be covered by the Government.</p>
-	<p>These programs are ideal for Businesses of any size.</p>
-	<p>Employers can focus on their business, while we train your staff.</p>
-	<label for="employee-training-dropdown">The following are all programs that are available for Businesses like yours:</label>
-	<select [ngModel]="selectedIntensivePackage" (ngModelChange)="selectPackage($event)" id="employee-training-dropdown">
-		<option [value]=""></option>
-		<option *ngFor="let package of intensivePackages" [value]="package.name">{{package.name}}</option>
-	</select>
-	<div *ngIf="selectedIntensivePackage">
-		Name: {{selectedIntensivePackage.name}}
-		targetAudience: {{selectedIntensivePackage.targetAudience}}
+<div class="column">
+	<p>NAB Business College, provide the <strong>opportunity for businesses to enrich their employees</strong> by providing enhanced training.</p>
+	<p>This training is also subsidized by the Government of Ontario, which means that <strong>up to 90% of the cost will be covered by the Government.</strong></p>
+	<p>These programs are <strong>ideal for Businesses of any size.</strong></p>
+	<p>Employers can focus on their business, while we train their staff.</p>
+	<div class="dropdown-container">
+		<label for="employee-training-dropdown">The following are all programs that are available for Businesses like yours</label>
+		<select [ngModel]="selectedIntensivePackage" (ngModelChange)="selectPackage($event)" id="employee-training-dropdown" class="small-8">
+			<option [value]=""></option>
+			<option *ngFor="let intensivePackage of intensivePackages" [value]="intensivePackage.name">{{intensivePackage.name}}</option>
+		</select>
+	</div>
+	<div *ngIf="displaySelectedIntensivePackage">
+		<h3>{{selectedIntensivePackage.name}} - Intensive Package</h3>
+		<p><span class="text-with-highlight-color">Who is that package for:</span> {{selectedIntensivePackage.targetAudience}}</p>
 		<ul>
-			certificates included: 
-			<li *ngFor="let certificate of selectedIntensivePackage.certificatesIncluded">Certificate: {{certificate.name}}, length: {{certificate.length}}</li>
+			Certificates Included in this Package 
+			<li *ngFor="let certificate of selectedIntensivePackage.certificatesIncluded">
+				{{certificate.name}} - <span class="text-with-highlight-color">{{certificate.length}} {{certificate.length == "1" ? "hour" : "hours"}}</span>
+			</li>
 		</ul>
-		Certified? {{selectedIntensivePackage.certificate ? "yes" : "no"}}
-
-		<app-contact-overlay [interestToPass]="package.name"></app-contact-overlay>
+		<div class="row icon-label-group-container">
+			<div class="small-6 column icon-label-group">
+				<img src="/assets/images/svg/clock.svg" />
+				<span>Duration:</span>
+				<span>{{durationInHours}} Hours = {{durationInDays}} {{durationInDays === 1 ? "Day" : "Days"}}</span>
+			</div>
+			<div class="small-6 column icon-label-group">
+				<img src="/assets/images/svg/diploma.svg" />
+				<span>Certifcation:</span>
+				<span>{{selectedIntensivePackage.certification ? "Yes" : "No"}}</span>
+			</div>
+		</div>
+		<app-contact-overlay [interestToPass]="selectedIntensivePackage.name"></app-contact-overlay>
 	</div>
 </div>

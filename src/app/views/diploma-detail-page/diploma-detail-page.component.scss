@@ -32,7 +32,7 @@
 		}
 	}
 
-	@include breakpoint("small") {
+	@include breakpoint("small down") {
 		height: 12rem;
 
 		h2 {
@@ -54,7 +54,7 @@
 	}
 	
 	.description {
-		@include breakpoint("small") {
+		@include breakpoint("small down") {
 			text-align: justify;
 		}
 	}
@@ -63,7 +63,7 @@
 		margin-top: 2rem;
 		label {
 			font-size: 1.4rem;
-			@include breakpoint("small") {
+			@include breakpoint("small down") {
 				font-size: 1rem;
 			}
 		}

@@ -17,7 +17,6 @@ export class DiplomaDetailPageComponent implements OnInit {
 
   ngOnInit() {
   	this.specificDiploma = this._diplomaService.getSpecificDiploma(this.route.snapshot.params['title']);
-  	console.log(this.specificDiploma);
   	this.otherDiplomas = this._diplomaService.getDiplomas().filter(diploma => diploma !== this.specificDiploma);
   }
 

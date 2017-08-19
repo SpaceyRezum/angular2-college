@@ -6,7 +6,7 @@
 
 	<div class="diploma-section-content-container small-12 column">
 		<div class="column">
-			<h3 >Description</h3>
+			<h3>Description</h3>
 			<div class="description" [innerHTML]="specificDiploma.courseDescription"></div>
 		</div>
 		<div class="column">
@@ -19,12 +19,12 @@
 		</div>
 		<div class="column">
 			<h3>Other Information</h3>
-			<div><strong>Income Expectactions:</strong> {{specificDiploma.incomeExpectations[0]}} - {{specificDiploma.incomeExpectations[1]}}</div>
+			<div><strong>Income Expectactions (in Canadian Dollars):</strong> {{specificDiploma.incomeExpectations[0]}} - {{specificDiploma.incomeExpectations[1]}}</div>
 			<div><strong>Length of course:</strong> {{specificDiploma.length}} months</div>
 		</div>
 		
 		<div class="button-group column">
-			<app-contact-overlay [interestToPass]="specificDiploma.title"></app-contact-overlay>
+			<app-contact-overlay [interestToPass]="specificDiploma.title" [needGoBackButton]="true"></app-contact-overlay>
 		</div>
 
 		<div class="other-diploma-navigator small-8 float-center">

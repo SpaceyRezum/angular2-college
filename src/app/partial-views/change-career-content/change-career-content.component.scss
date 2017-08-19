@@ -36,7 +36,7 @@
 		.certificate-list {
 			margin-bottom: 2rem;
 
-			@include breakpoint("small") {
+			@include breakpoint("small down") {
 				margin-bottom: 1rem;
 			}
 		}

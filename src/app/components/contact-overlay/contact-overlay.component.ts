@@ -22,12 +22,15 @@ import { animate, state, transition, style, trigger } from '@angular/core';
 export class ContactOverlayComponent implements OnInit {
 	contactFormOverlayDisplayed: boolean;
   interest: string;
+  goBackButton: boolean;
 
   constructor() { 
     this.contactFormOverlayDisplayed = false;
+    this.goBackButton = false;
   }
 
 	@Input() interestToPass: string;
+  @Input() needGoBackButton: boolean;
   
   @HostListener('document:keydown', ['$event'])
   disableContactFormOverlayOnEscape(event: KeyboardEvent) {
@@ -41,6 +44,8 @@ export class ContactOverlayComponent implements OnInit {
 
   ngOnInit() {
     this.interest = this.interestToPass;
+    if (this.needGoBackButton)
+      this.goBackButton = this.needGoBackButton;
   }
 
   toggleContactFormOverlay() {

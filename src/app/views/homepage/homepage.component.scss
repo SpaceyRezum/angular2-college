@@ -9,7 +9,7 @@
 	position: relative;
 	margin-bottom: 4rem;
 
-	@include breakpoint("small") {
+	@include breakpoint("small down") {
 		height: 14rem;
 		margin-bottom: 2rem;
 	}
@@ -42,7 +42,7 @@
 			}
 		}
 
-		@include breakpoint("small") {
+		@include breakpoint("small down") {
 			h1 {
 				font-size: 1.4rem;
 			}

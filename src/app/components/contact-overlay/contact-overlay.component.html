@@ -1,9 +1,10 @@
 <div class="action-buttons-container row columns">
 	<h4>Want to know more?</h4>
-	<div class="small-6">
+	<div class="button-group small-6">
 		<button class="button success" (click)="toggleContactFormOverlay()">
 			Let us contact you!
 		</button>
+		<a *ngIf="goBackButton" class="button warning hollow" onclick="window.history.back()">Go Back</a>
 
 		<div class="overlay-window"
 			[@animateContactFormOverlay]="contactFormOverlayDisplayed">

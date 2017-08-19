@@ -8,10 +8,10 @@
 			{{specificCertificate.name}}
 		</h2>
 		<p>
-			<span class="smaller-title">Description:</span>{{specificCertificate.description}}
+			<span class="text-with-highlight-color">Description:</span>{{specificCertificate.description}}
 		</p>
 		<div *ngIf="specificCertificate.courses.length > 0">
-			<span class="smaller-title">Courses:</span>
+			<span class="text-with-highlight-color">Courses:</span>
 			<ul>
 				<li *ngFor="let course of specificCertificate.courses">{{course}}</li>
 			</ul>
@@ -29,6 +29,8 @@
 			</div>
 		</div>
 	</div>
-	<app-contact-overlay [interestToPass]="specificCertificate.name"></app-contact-overlay>
+	<div class="button-group column">
+		<app-contact-overlay [interestToPass]="specificCertificate.name" [needGoBackButton]="true"></app-contact-overlay>
+	</div>
 </div>
 

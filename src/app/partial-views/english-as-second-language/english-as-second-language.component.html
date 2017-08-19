@@ -1,30 +1,31 @@
-<div>
-	<label for="english-as-second-language-dropdown">To learn more, select from the two different programs available:</label>
-	<select [ngModel]="programSelected" (ngModelChange)="selectProgram($event)" id="english-as-second-language-dropdown">
+<div class="column">
+	<p for="english-as-second-language-dropdown">To learn more, select from the two different programs available</p>
+	<select [ngModel]="programSelected" (ngModelChange)="selectProgram($event)" id="english-as-second-language-dropdown" class="small-8">
 		<option value=""></option>
 		<option value="summer-camp-program">Summer Camps for International Students</option>
 		<option value="esl-program">Learn English as a Second Language</option>
 	</select>
 
 	<div *ngIf="(programSelected === 'summer-camp-program')">
-		<p>NAB College provides existing or non-existing students in a foreign country the opportunity to study in the beautiful country of Canada.
-		At NBA College, you’ll have a wide range of certificate program to choose from. You’ll be able to pick a standardized or customized course with the support of one of our counsellors.</p>
-		<ul>The best part, after studying, NAB College will help you visit some of the most desirable tourists destination in the Toronto area.
+		<p>NAB College provides existing or non-existing students in a foreign country <strong>the opportunity to study in the beautiful country of Canada.</strong></p>
+
+		<p>At NAB College, you’ll have a <strong>wide range of certificate program to choose from</strong>. You’ll be able to pick a standardized or customized course with the support of one of our counsellors.</p>
+		
+		<ul>The best part, after studying, <strong>NAB College will help you visit</strong> some of the most desirable tourists destination in the Toronto area.
 		The Benefits of studying with NAB College over the summer are countless, but here are a few anyways:
-			<li>NAB will support in finding housing accommodations</li>
-			<li>Take certificate based program during the summer</li>
-			<li>Experience the World Class City of Toronto. NAB College supports students by going with them to multiple tourist attractions and nightlife.</li>
-			<li>All inclusive (NAB College’s International Student Package includes Airport pick up/drop off, housing accommodations, meals and entertainment)</li>
+			<li>NAB will <strong>support in finding housing</strong> accommodations</li>
+			<li>Take <strong>certificate-based program</strong> during the summer</li>
+			<li>Experience the <strong>World Class City of Toronto</strong>. NAB College supports students by going with them to multiple tourist attractions and nightlife.</li>
+			<li><strong>All inclusive</strong> (NAB College’s International Student Package includes Airport pick up/drop off, housing accommodations, meals and entertainment)</li>
 		</ul>
 		<app-contact-overlay [interestToPass]="'Summer Camp Program'"></app-contact-overlay>
 	</div>
 
 	<div *ngIf="(programSelected === 'esl-program')">
-		<p>Want to learn English?  NAB college is the place for you. We accept a wide range of students, from overseas or within Canada.  You’ll have access to professional teacher’s that will support you in the learning of the English language.</p>
-		<p>We specialize in having smaller classroom size, to ensure that all students get the required one on attention.</p>
-		<p>A majority of our International Students spend the summer in Toronto learning English, while experiencing the culture at the same time. It’s a fantastic opportunity to learn English and be a tourist.</p>
-		<p>For local students, we have fixable class, also offered in the evening. This was you can learn English within your own person schedule.
-		Our professional teach ensure that students learning English quickly, while also having fun!</p>
+		<p><strong>Want to learn English?</strong> NAB college is the place for you. We accept a wide range of students, from overseas or within Canada. You’ll have access to <strong>professional teachers</strong> that will support you in the learning of the English language.</p>
+		<p>We specialize in having <strong>smaller classroom size</strong>, to ensure that all students get the required one on attention.</p>
+		<p>A majority of our <strong>International Students spend the summer in Toronto learning English</strong>, while experiencing the culture at the same time. It’s a fantastic opportunity to learn English and be a tourist.</p>
+		<p>For local students, we have fixable class, <strong>also offered in the evening</strong>. This was you can learn English within your own person schedule.	Our professional teachers ensure that students learning English quickly, while also having fun!</p>
 
 		<app-contact-overlay [interestToPass]="'English as a Second Language Program'"></app-contact-overlay>
 	</div>

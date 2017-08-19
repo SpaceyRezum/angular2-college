@@ -1,0 +1,54 @@
+@import "~_media-query-settings.scss";
+
+div {
+	text-align: left;
+
+	@include breakpoint("small down") {
+		text-align: justify;
+	}
+
+	.dropdown-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.icon-label-group-container {
+		border: 1px gray solid;
+		border-right: none;
+		border-left: none;
+		padding: 1rem 0;
+		margin-bottom: 2rem;
+		.icon-label-group {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			img, span {
+				height: 3rem;
+				margin-right: 1rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			@include breakpoint("small down") {
+				img, span {
+					height: 2rem;
+					font-size: .8rem;
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
+
+	ul {
+		margin-left: 0;
+
+		li {
+			margin-left: 2rem;
+		}
+	}
+}
