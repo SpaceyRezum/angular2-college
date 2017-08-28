@@ -4,7 +4,7 @@ export const DIPLOMAS: Diploma[] = [
 {
 	title: "Medical Office Administration",
 	url: "medical-office-administration",
-	imgUrl: "/assets/images/diplomas/medical-office-administration.jpeg",
+	imgUrl: "assets/images/diplomas/medical-office-administration.jpeg",
 	length: 9,
 	requirements: ["Ontario grade 12 English or equivalent","Canadian Citizen, Permanent Resident or Immigration approval"],
 	courseDescription: "<p>The Medical Office Administration Diploma will have you job ready in only 9 months.</p>\
@@ -17,7 +17,7 @@ export const DIPLOMAS: Diploma[] = [
 },{
 	title: "Accounting and Payroll Technician Diploma Program",
 	url: "accounting-and-payroll-technicia-diploma-program",
-	imgUrl: "/assets/images/diplomas/accounting-payroll.jpeg",
+	imgUrl: "assets/images/diplomas/accounting-payroll.jpeg",
 	length: 9.5,
 	requirements: ["Ontario grade 12 English or equivalent","Canadian Citizen, Permanent Resident or Immigration approval"],
 	courseDescription: "<p>The Account and Payroll Technician Diploma Program will have you job ready in 9.5 months.</p>\
@@ -31,7 +31,7 @@ export const DIPLOMAS: Diploma[] = [
 },{
 	title: "Teacher of English as a Second Language (TESL) Advance Diploma",
 	url: "teacher-of-english-as-second-language",
-	imgUrl: "/assets/images/diplomas/student-study-group.jpeg",
+	imgUrl: "assets/images/diplomas/student-study-group.jpeg",
 	length: 7,
 	requirements: ["Bachelor’s Degree (minimum three-year)","Canadian Citizen, Permanent Resident or Immigration approval"],
 	courseDescription: "<p>TESL Diploma from NAB College will allow student to be able to teach English as a second language in or outside of Canada.</p>\

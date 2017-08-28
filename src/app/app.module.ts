@@ -25,6 +25,7 @@ import { EnglishAsSecondLanguageComponent } from './partial-views/english-as-sec
 import { EmployeeTrainingComponent } from './partial-views/employee-training/employee-training.component';
 import { CertificateDetailPageComponent } from './views/certificate-detail-page/certificate-detail-page.component';
 import { ContactOverlayComponent } from './components/contact-overlay/contact-overlay.component';
+import { ContactPageComponent } from './views/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ContactOverlayComponent } from './components/contact-overlay/contact-ov
     EnglishAsSecondLanguageComponent,
     EmployeeTrainingComponent,
     CertificateDetailPageComponent,
-    ContactOverlayComponent
+    ContactOverlayComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,9 @@ import { ContactOverlayComponent } from './components/contact-overlay/contact-ov
       },{
         path: 'certificates/:title',
         component: CertificateDetailPageComponent
+      },{
+        path: 'contact-us',
+        component: ContactPageComponent
       },{
         path: '**',
         component: PageNotFoundComponent,
