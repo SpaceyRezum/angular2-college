@@ -91,6 +91,12 @@
             </select>
           </div>
         </div>
+        <p>Here's a list of diplomas you could also get a scolarship for:</p>
+        <select (change)="navigateToDiploma($event.target.value)" class="diploma-list small-8 float-center">
+          <option></option>
+          <option *ngFor="let diploma of diplomaContent" value="{{diploma.url}}"> 
+            {{diploma.title}}</option>
+          </select>
+        </div>
       </div>
     </div>
-  </div>

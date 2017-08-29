@@ -10,21 +10,22 @@
   align-items: center;
   justify-content: center;
 
+  .overlay-form-container {
+    position: relative;
+  }
+
   app-contact-form {
   	overflow: scroll;
 		background: white;
-		height: 70vh;
 		position: relative;
 	}
 }
 
 .action-buttons-container {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   div {
-    margin: 2% 0;
     display: flex;
     justify-content: space-around;  
   }

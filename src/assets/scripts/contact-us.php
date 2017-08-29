@@ -3,9 +3,10 @@
 $interest=$_POST["interest"];
 $firstName=$_POST["firstName"];
 $lastName=$_POST["lastName"];
+$country=$_POST["country"];
+$phoneNumber=$_POST["phoneNumber"];
 $email=$_POST["email"];
 $message=$_POST["message"];
-
 
 $mailto = "info@alexis-bellet.com";
 
@@ -13,6 +14,8 @@ $subject = $firstName . ' ' . $lastName . ' would like to know more about ' . $i
 
 $body = 'First name : ' . $firstName . '\n' 
 				. 'Last name: ' . $lastName . '\n'
+				. 'Country: ' . $country . '\n'
+				. 'Phone Number: ' . $phoneNumber . '\n'
 				. 'Email: ' . $email . '\n'
 				. 'Message: ' $message;
 

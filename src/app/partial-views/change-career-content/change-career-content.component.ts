@@ -4,6 +4,7 @@ import { Certificate } from '../../data/certificates/certificates-model';
 import { CertificateService } from '../../services/certificate.service';
 import { Diploma } from '../../data/diplomas/diplomas-model';
 import { DiplomaService } from '../../services/diploma.service';
+declare let $: any;
 
 
 @Component({
@@ -72,12 +73,14 @@ export class ChangeCareerContentComponent implements OnInit {
   navigateToDiploma(diploma) {
     if (diploma !== "") {
       this._router.navigate(['/diplomas/', diploma]);
+      $("html, body").animate({ scrollTop: 0 }, 600);
     }
   }
 
   navigateToCertificate(certificate) {
     if (certificate !== "") {
-      this._router.navigate(['/certificates/', certificate])
+      this._router.navigate(['/certificates/', certificate]);
+      $("html, body").animate({ scrollTop: 0 }, 600);
     }
   }
 

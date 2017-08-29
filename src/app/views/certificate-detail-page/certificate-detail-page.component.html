@@ -1,4 +1,4 @@
-<div class="row column certificate-detail-page-container">
+<div class="row column certificate-detail-page-container" *ngIf="specificCertificate">
 	<div class="row certificate-detail-page-image-container">
 		<img src="{{specificCertificate.imgUrl}}" alt="Image of {{specificCertificate.name}}"/>
 		<h2>{{specificCertificate.category}}</h2>
@@ -29,8 +29,20 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="button-group column">
 		<app-contact-overlay [interestToPass]="specificCertificate.name" [needGoBackButton]="true"></app-contact-overlay>
+	</div>
+
+	<div class="other-certificate-navigator small-12 column float-center small-up-2 medium-up-4">
+		<p style="text-align: center">Navigate to other certificates available</p>
+		<div *ngFor="let certificateCategory of otherCertificateCategories" class="small-6 medium-4 column">
+			<label>{{certificateCategory.name}}</label>
+			<select (change)="navigateToCertificate($event.target.value)">	
+				<option></option>
+				<option *ngFor="let certificate of certificateCategory.certificates" value="{{certificate.url}}">{{certificate.name}}</option>
+			</select>
+		</div>
 	</div>
 </div>
 

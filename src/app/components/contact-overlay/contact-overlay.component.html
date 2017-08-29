@@ -7,11 +7,9 @@
 		<a *ngIf="goBackButton" class="button warning hollow" onclick="window.history.back()">Go Back</a>
 
 		<div class="overlay-window"
-			[@animateContactFormOverlay]="contactFormOverlayDisplayed">
-			<button class="close-button" aria-label="Close modal" type="button" (click)="toggleContactFormOverlay()">
-					<span aria-hidden="true">&times;</span>
-			</button>
-			<app-contact-form [overlayWindow]="true" [passedInterest]="interest" class="row colum small-6" (closeOverlayWhenSubmit)="toggleContactFormOverlay($event)"></app-contact-form>
+		[@animateContactFormOverlay]="contactFormOverlayDisplayed">
+			<app-contact-form [overlayWindow]="true" [passedInterest]="interest" class="row colum small-6" (closeOverlayWhenSubmit)="toggleContactFormOverlay($event)">
+			</app-contact-form>
 		</div>
 	</div>
 </div>
