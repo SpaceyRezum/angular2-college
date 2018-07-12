@@ -2,9 +2,16 @@
 
 #selected-topic-container {
 	text-align: center;
+	position: relative;
 
 	h2 {
 		margin: 2rem 0;
+	}
+
+	.language-switch {
+		position: absolute;
+		top: 1rem;
+		right: 0rem;
 	}
 }
 
@@ -44,6 +51,10 @@
 				max-height: 200px;
 			}
 
+			@include breakpoint("small down") {
+				margin: 1rem 0 0;
+			}
+
 			.advantage-icon {
 				height: 4rem;
 			}
@@ -72,6 +83,19 @@
 
 					p {
 						font-size: .9rem;
+					}
+
+					@include breakpoint("small down") {
+						h3 {
+							word-break: initial;
+							text-align: left;
+					    font-size: 1rem;
+					    font-weight: 900;
+						}
+
+						p {
+							font-size: .8rem;
+						}
 					}
 				}
 			}

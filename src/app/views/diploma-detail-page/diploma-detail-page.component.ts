@@ -13,6 +13,7 @@ declare let $: any;
 export class DiplomaDetailPageComponent implements OnInit {
 	specificDiploma: Diploma;
 	otherDiplomas: Array<Diploma>;
+  interestToPass: string;
 
   constructor(private route: ActivatedRoute, private _diplomaService: DiplomaService, private _router: Router) { 
     route.params.subscribe(val => {
@@ -22,6 +23,8 @@ export class DiplomaDetailPageComponent implements OnInit {
 
       if (!this.specificDiploma)
         this._router.navigate(['/page-not-found']);
+      else 
+        this.interestToPass = "The following certificate: " + this.specificDiploma.title;
     });
   }
 

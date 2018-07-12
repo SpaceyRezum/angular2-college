@@ -15,6 +15,7 @@ export class EmployeeTrainingComponent implements OnInit {
   displaySelectedIntensivePackage: boolean;
   durationInDays: number;
   durationInHours: number;
+  interestToPass: string;
 
   constructor(private _intensivePackageService: IntensivePackageService) { 
     this.displaySelectedIntensivePackage = false;
@@ -28,6 +29,7 @@ export class EmployeeTrainingComponent implements OnInit {
     this.selectedIntensivePackage = this.intensivePackages.find(function(intensivePackage){
       return intensivePackage.name == selectedPackageName;
     });
+    this.interestToPass = "Intensive package: " + this.selectedIntensivePackage.name;
     this.displaySelectedIntensivePackage = true;
 
     this.calculateTotalTime(this.selectedIntensivePackage);

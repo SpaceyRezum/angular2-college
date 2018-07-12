@@ -1,6 +1,7 @@
 @import "~_media-query-settings.scss";
 
 .certificate-detail-page-container {
+	overflow: hidden;
 	.certificate-detail-page-image-container {
 		position: relative;
 		overflow: hidden;
@@ -93,4 +94,11 @@
 			}
 		}
 	}
+
+	.other-certificate-navigator {
+			display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
+		}
 }

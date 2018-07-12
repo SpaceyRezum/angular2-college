@@ -3,27 +3,26 @@
     <span aria-hidden="true">&times;</span>
   </button>
   <p class="row">For us to contact you, we would need you to fill out this form!</p>
-  <!-- <form (ngSubmit)="sendEmail(inputData)" #contactForm="ngForm" class="row"> -->
-  <form method="post" action="~/app/assets/scripts/contact-us.php" #contactForm="ngForm" class="row">
+  <form (ngSubmit)="sendEmail(inputData)" #contactForm="ngForm" class="row">
     <div class="contact-form-input-group" hidden>
       <input type="text" name="interest" [(ngModel)]="inputData.interest">
     </div>
     <div class="row">
-      <div class="contact-form-input-group small-6 column">
+      <div class="contact-form-input-group small-12 medium-6 column">
         <label>First Name</label>
         <input type="text" name="firstName" [(ngModel)]="inputData.firstName" required>
       </div>
-      <div class="contact-form-input-group small-6 column">
+      <div class="contact-form-input-group small-12 medium-6 column">
         <label>Last Name</label>
         <input type="text" name="lastName" [(ngModel)]="inputData.lastName" required>
       </div>
     </div>
     <div class="row">
-      <div class="contact-form-input-group small-6 column">
+      <div class="contact-form-input-group small-12 medium-6 column">
         <label>Country</label>
         <input type="text" name="Country" [(ngModel)]="inputData.country" required>
       </div>
-      <div class="contact-form-input-group small-6 column">
+      <div class="contact-form-input-group small-12 medium-6 column">
         <label>Phone Number</label>
         <input type="text" name="phoneNumber" [(ngModel)]="inputData.phoneNumber" required>
       </div>

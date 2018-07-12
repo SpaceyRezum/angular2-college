@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ElementRef, HostListener } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { animate, state, transition, style, trigger } from '@angular/core';
 declare let $: any;
@@ -23,27 +23,34 @@ import { Topic } from '../../data/topics/topics-model';
   ]
 })
 export class SelectedTopicDisplayComponent {
-  constructor(private router: Router) { } 
+  constructor(private router: Router) { }
   @Input() selectedTopicState: string;
   @Input() selectedTopic: Topic;
   @Output() onResetSelectedTopic = new EventEmitter;
+  languageSwitch: any = {
+    english: 'See this content in English',
+    french: 'Voir ce contenu en Français'
+  };
+  languageToDisplay = 'english';
 
   ngOnChanges() {
     if (this.selectedTopic) {
+      this.languageToDisplay = 'english';
       this.selectedTopicState = 'unselected';
       setTimeout(() => this.animateSelectedTopic(), 100);
     }
   }
 
   navigateToTopic(topicRoute) {
-  	this.router.navigate(['/topic', topicRoute]);
+    this.router.navigate(['/topic', topicRoute]);
   }
 
-	resetSelectedTopic() {
+  resetSelectedTopic() {
+    this.languageToDisplay = 'english';
     this.selectedTopicState = 'unselected';
     this.scrollToTop();
     setTimeout(() => this.onResetSelectedTopic.emit(), 1000);
-	}
+  }
 
   animateSelectedTopic() {
     this.selectedTopicState = 'selected';
@@ -53,5 +60,13 @@ export class SelectedTopicDisplayComponent {
     $('html, body').animate({
         scrollTop: 0
     }, 800);
+  }
+
+  changeLanguage() {
+    if (this.languageToDisplay === 'english') {
+      this.languageToDisplay = 'french';
+    } else {
+      this.languageToDisplay = 'english';
+    }
   }
 }

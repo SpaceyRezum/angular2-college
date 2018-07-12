@@ -33,16 +33,20 @@ export class ContactFormComponent {
 
 	sendEmail(inputData) {
 		this.submitted = true;
-		// $.ajax({ 
-		// 	type: "post",
-		// 	url: 'assets/scripts/contact-us.php',
-		// 	data: inputData,
-		// 	success: function(data) {
-		// 		console.log('script works', data);
-		// 	}, 
-		// 	error: function(err) {
-		// 		console.log(err);
-		// 	}
-		// })
+		$.ajax({ 
+			type: "post",
+			url: '/assets/scripts/contact-us.php',
+			data: inputData,
+			success: function(data) {
+				alert("Thank you for your interest, your email has been sent successfully, someone will be in touch with you soon!");
+				if (this.overlayWindow)
+					this.closeOverlay();
+				window.location.href = "/";
+			}, 
+			error: function(err) {
+				alert("Your email could not be sent out, please try again later or contact NAB college directly via phone");
+				console.log(err);
+			}
+		})
 	}
 }

@@ -1,3 +1,10 @@
+@import "~_media-query-settings.scss";
+
 h4 { 
 	text-align: center;
+	margin-top: 1rem;
+
+	@include breakpoint("small down") {
+		padding: 0 0.5rem;
+	}
 }

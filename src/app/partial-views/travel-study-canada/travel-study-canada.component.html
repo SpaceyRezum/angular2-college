@@ -1,6 +1,6 @@
-<div class="column">
+<div class="column" *ngIf='!displayFrench'>
 	<p>NAB College has developed a history of <strong>welcoming international student</strong>, who wish to study in Canada. Whether it is to enrol in a diploma program or to take a certificate-based program during the summer, NAB College is a fantastic location to Study.</p>
-	<ul>Our Advantages!
+	<ul>Our Advantages:
 		<li>Acquire a <strong>Diploma in less than a year</strong>, from a recognized Canadian College</li>
 		<li>NAB will <strong>support in finding housing</strong> accommodations</li>
 		<li>Take <strong>certificate-based program</strong> during the summer</li>
@@ -8,5 +8,18 @@
 		<li><strong>All inclusive</strong> (NAB College’s International Student Package includes Airport pick up/drop off, housing accommodations, meals and entertainment)</li>
 	</ul>
 	<p>To learn more about our Summer Certificate programs and Diploma studies for International studies contact us!</p>
+	<app-contact-overlay [interestToPass]="'Travel and Study in Canada'"></app-contact-overlay>
+</div>
+
+<div class="column" *ngIf='displayFrench'>
+	<p>NAB College a developpé une historique d'accueil d'étudiants internationaux ayant le desir d'étudier au Canada. Que cela soit à la poursuite d'un diplôme ou pour s'inscrire à une formation certifiante pendant l'été, NAB College est un endroit fantastique pour étudier.</p>
+	<ul>Nos Avantages:
+		<li>Aquérir un <strong>diplôme en moins d'un an en provenance d'une institution canadienne reconnue</strong>.</li>
+		<li>NAB vous <strong>aide à trouver un logement sur place</strong>.</li>
+		<li>Prenez part à une <strong>formation certifiée pendant l'été</strong></li>
+		<li>Profitez de <strong>Toronto, ville de classe mondiale</strong>. NAB College vous accompagne dans votre visite des nombreuses attractions touristiques de la ville et vous servira de guide pour profiter de sa vie nocturne.</li>
+		<li><strong>Tout est inclus</strong>! Grâce au pack 'Etudiant International' de NAB College, nous vous récupérons et ramenons à l'aéroport et pendant votre séjour, vous serez nourris, logés et vos activités sont prises en compte.</li>	
+	</ul>
+	<p>Pour en savoir plus sur nos formations durant l'été ainsi que nos programmes diplomant, contactez nous!</p>
 	<app-contact-overlay [interestToPass]="'Travel and Study in Canada'"></app-contact-overlay>
 </div>

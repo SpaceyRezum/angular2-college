@@ -1,3 +1,5 @@
+@import "~_media-query-settings.scss";
+
 .contact-form-container {
 	height: 100%;
 	display: flex;
@@ -8,7 +10,12 @@
 
 .close-button {
 	height: 2rem;
-	widows: 2rem;
+	width: 2rem;
+
+	@include breakpoint("small down") {
+		height: 4rem;
+	}
+
 	span {
 		font-size: 2rem;
 	}

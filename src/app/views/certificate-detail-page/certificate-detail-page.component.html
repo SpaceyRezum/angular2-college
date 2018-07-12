@@ -1,6 +1,6 @@
 <div class="row column certificate-detail-page-container" *ngIf="specificCertificate">
 	<div class="row certificate-detail-page-image-container">
-		<img src="{{specificCertificate.imgUrl}}" alt="Image of {{specificCertificate.name}}"/>
+		<img src="{{specificCertificate.url}}" alt="Image of {{specificCertificate.name}}"/>
 		<h2>{{specificCertificate.category}}</h2>
 	</div>
 	<div class="small-12 certificate-detail-page-content-container column">
@@ -18,12 +18,12 @@
 		</div>
 		<div class="row icon-label-group-container">
 			<div class="small-6 column icon-label-group">
-				<img src="assets/images/svg/clock.svg" />
+				<img src="/assets/images/svg/clock.svg" />
 				<span>Duration:</span>
-				<span>{{specificCertificate.duration}} Hours</span>
+				<span>{{specificCertificate.duration > 0 ? specificCertificate.duration + " Hours" : "TBD" }}</span>
 			</div>
 			<div class="small-6 column icon-label-group">
-				<img src="assets/images/svg/diploma.svg" />
+				<img src="/assets/images/svg/diploma.svg" />
 				<span>Certifcation:</span>
 				<span>{{specificCertificate.certification ? "Yes" : "No"}}</span>
 			</div>
@@ -31,11 +31,11 @@
 	</div>
 
 	<div class="button-group column">
-		<app-contact-overlay [interestToPass]="specificCertificate.name" [needGoBackButton]="true"></app-contact-overlay>
+		<app-contact-overlay [interestToPass]="interestToPass" [needGoBackButton]="true"></app-contact-overlay>
 	</div>
-
-	<div class="other-certificate-navigator small-12 column float-center small-up-2 medium-up-4">
-		<p style="text-align: center">Navigate to other certificates available</p>
+	
+	<p style="text-align: center">Navigate to other certificates available</p>
+	<div class="other-certificate-navigator small-12 column float-center small-up-1 medium-up-2 large-up-3">
 		<div *ngFor="let certificateCategory of otherCertificateCategories" class="small-6 medium-4 column">
 			<label>{{certificateCategory.name}}</label>
 			<select (change)="navigateToCertificate($event.target.value)">	

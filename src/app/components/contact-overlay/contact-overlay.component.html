@@ -1,6 +1,6 @@
 <div class="action-buttons-container row columns">
 	<h4>Want to know more?</h4>
-	<div class="button-group small-6">
+	<div class="button-group small-12 medium-6">
 		<button class="button success" (click)="toggleContactFormOverlay()">
 			Let us contact you!
 		</button>
@@ -8,7 +8,7 @@
 
 		<div class="overlay-window"
 		[@animateContactFormOverlay]="contactFormOverlayDisplayed">
-			<app-contact-form [overlayWindow]="true" [passedInterest]="interest" class="row colum small-6" (closeOverlayWhenSubmit)="toggleContactFormOverlay($event)">
+			<app-contact-form [overlayWindow]="true" [passedInterest]="interest" class="row colum small-12 medium-6" (closeOverlayWhenSubmit)="toggleContactFormOverlay($event)">
 			</app-contact-form>
 		</div>
 	</div>
